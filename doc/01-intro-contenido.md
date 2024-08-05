@@ -16,6 +16,53 @@
 * **Conjunto de datos almacenados, representando entidades y sus relaciones, lógicamente coherente** (no hay contradicción entre los datos relacionados ni pérdida de información, aún ante uso compartido), **con significado implícito** (representa aspectos del universo de discurso "UdeD", Datos + contexto = Información) **y persistente** (los datos permanecen en el tiempo)
 * **Una BD es diseñada, construida y poblada con datos para un cierto propósito**
 * **Contiene información relevante para una organización** que es clave para la correcta toma de decisiones
+* Por ejemplo: BD de provincias
+
+| centroide_lat | centroide_lon | id | nombre | nombre_completo |
+| -- | -- | -- | -- | -- |
+| -34.6144420654301 | -58.4458763250916 | 02 | Ciudad Autónoma de Buenos Aires | Ciudad Autónoma de Buenos Aires |
+| -38.6419828626673 | -70.1198972237318 | 58 | Neuquén | Provincia del Neuquén |
+| -33.7611035381154 | -66.0252312714021 | 74 | San Luis | Provincia de San Luis |
+| -30.7088227091528 | -60.9506872769706 | 82 | Santa Fe | Provincia de Santa Fe |
+| -29.6849372775783 | -67.1817575814487 | 46 | La Rioja | Provincia de La Rioja |
+| -27.3359537960762 | -66.9478972451295 | 10 | Catamarca | Provincia de Catamarca |
+| -26.948283501723  | -65.3647655803683 | 90 | Tucumán | Provincia de Tucumán |
+| -26.3869871835867 | -60.765116260356  | 22 | Chaco | Provincia del Chaco |
+| -24.8950871761481 | -59.9321901121647 | 34 | Formosa | Provincia de Formosa |
+| -48.8155471830527 | -69.9557619144913 | 78 | Santa Cruz | Provincia de Santa Cruz |
+| -43.7886271389083 | -68.5267363339818 | 26 | Chubut | Provincia del Chubut |
+| ... | ... | ... | ... | ... |
+
+## Conceptos
+
+| Concepto | | Ejemplo |
+| -- | -- | -- |
+| **Dato**         | trozo de información concreta sobre algún concepto o suceso | 1969 |
+| **Tipo de Dato** | naturaleza del dato | numérico |
+| **Campo**        | identificador para toda una familia de datos | fecha_nacimiento |
+| **Registro**     | recolección de datos referentes a un mismo concepto o suceso | datos de una persona |
+| **Clave**        | campo que identifica de forma única a cada registro | DNI |
+| **Tabla**        | conjunto de registros bajo un mismo nombre | clientes |
+| **Consulta**     | instrucción para hacer peticiones a una BD | clientes de CABA |
+| **Índice**       | estructura que almacena los campos clave de una tabla | |
+| **Vista**        | tabla virtual | |
+| **Script**       | secuencia de instrucciones que realizan operaciones de mantenimiento de los datos almacenados en la BD | |
+| **Procedimientos** | tipo de script que está almacenado en la BD y forma parte del esquema | |
+
+## Estructura de una BD
+
+* Una BD almacena los datos a través de un **esquema**
+* Esquema es la **definición de la estructura** donde se almacenan los datos
+* Al esquema también se le suele llamar **metainformación** (información sobre la información)
+* Ejemplo:
+
+| table_schema | table_name | table_rows |
+| -- | -- | -- |
+| jardineria | clientes | 36 |
+| jardineria | oficinas | 10 |
+| jardineria | pagos | 26 |
+| jardineria | pedidos | 115 |
+| jardineria | productos | 276 |
 
 ## Evolución de los sistema de BD
 
@@ -106,10 +153,12 @@
 * Estándar desde 1986
 * Es **declarativo**: se indica **qué datos** se requieren, sin especificar cómo
 
-  ||||
-  | -- | -- | -- |
-  | **DDL** | **Lenguaje de Definición de Datos** | permite crear y modificar el esquema de la base, tablas, restricciones, vistas, etc. |
-  | **DML** | **Lenguaje de Manejo de Datos**     | permite consultar (selección) y actualizar datos (inserción, modificación, eliminación) |
+  |||||
+  | -- | -- | -- | -- |
+  | **DDL** | **Lenguaje de Definición de Datos** | permite crear y modificar el esquema de la base, tablas, restricciones, vistas, etc. | CREATE, DROP, ALTER |
+  | **DML** | **Lenguaje de Manejo de Datos**     | permite consultar (selección) y actualizar datos (inserción, modificación, eliminación) | SELECT, INSERT, DELETE, UPDATE |
+  | **DCL** | **Lenguaje de Control de Datos**    | permite gestionar el acceso a los datos | GRANT, REVOKE |
+  | **TCL** | **Lenguaje de Control de Transacciones** | permite ejecutar varios comandos de forma simultánea como si fuera un comando atómico o indivisible | COMMIT, ROLLBACK |
 
 * Otras posibilidades:
 
