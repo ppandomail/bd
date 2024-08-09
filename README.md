@@ -19,13 +19,13 @@
 
 | Unidad | Contenido | Actividades |
 | -- | -- | -- |
-| 01 | [Modelado de Datos](doc/01-modelado-datos-contenido.md)      | [Video: ¿Qué es una Base de Datos?](https://youtu.be/6S8A-1jBD5Y?si=qbi_cQbx0bK1sUuu) |
-| 02 | [Modelo Conceptual](doc/02-modelo-conceptual-contenido.md)   | [ACT 1](act/1-MER-Entidades-Atributos) - [ACT 2](act/2-MER-Relaciones.md) - [Video: Empresa de Transporte](https://youtube.com/playlist?list=PLBPPvTp9AhDQXL-8T4mP79h9fs3CRf0bk&si=LlCrz8bR1Cj6_ho8) - [ACT 3](act/3-MER-Extendido.md) - [ACT 4](act/4-MER-Extendido-Jerarquias.md) - [Video: Médicos sin Frontera DER](https://www.youtube.com/watch?v=m5PmSXG75GA) |
-| 03 | [Modelo Lógico Fase I](doc/03-modelo-logico-1-contenido.md)  | [ACT 5](act/5-ML-Fase-I.md) - [Video: Médicos sin Frontera (ML FI)](https://www.youtube.com/watch?v=JorZw-IQK0I) |
-| 04 | [Modelo Relacional](doc/04-modelo-relacional-contenido.md)   | [Video: Modelo lógico Fase I](https://youtu.be/v-nN8uCH8VA?si=qOnFoc_RhdoIOUny) - [Video: Médicos sin Fronteras. Modelo Lógico Fase I: Reestructuración del DER](https://youtu.be/JorZw-IQK0I?si=oEFcDjHWYQTvnrci) - [Guía para elegir BD](https://www.youtube.com/watch?v=859UkoFr56c) - [Productos del mercado](https://www.youtube.com/watch?v=8Ch5s3F688w) |
-| 05 | [Modelo Lógico Fase II](doc/05-modelo-logico-2-contenido.md)  | [ACT 6](act/6-ML-Fase-II.md) - [Modelo Lógico Fase II](https://youtu.be/iiARpn3-f5s?si=AuSbSC-rzkr4Cp8L) |
-| 06 | [Normalización](doc/06-normalizacion-contenido.md)           | |
-| 07 | [Modelo Físico - SQL](doc/07-modelo-fisico-sql-contenido.md) | [Los videos están en el Genially](https://view.genially.com/663e9310d1c0da001435a220/presentation-lenguaje-sql) |
+| 01 | [Modelado de Datos](doc/C1-modelado-datos-contenido.md)     | [Elegir Equipo + Caso](act/A0-casos-de-estudio.md) - [V1: ¿Qué es una Base de Datos?](https://youtu.be/6S8A-1jBD5Y?si=qbi_cQbx0bK1sUuu) |
+| 02 | [Modelo Conceptual](doc/C2-modelo-conceptual-contenido.md)  | [A1](act/A1-mer-entidades-atributos.md) - [A2](act/A2-mer-relaciones.md) - [V2: Herramientas](#herramientas) - [V3: Empresa de Transporte](https://youtube.com/playlist?list=PLBPPvTp9AhDQXL-8T4mP79h9fs3CRf0bk&si=LlCrz8bR1Cj6_ho8) - [E1](act/E1-mer.md) - [A3](act/A3-mer-extendido.md) - [A4](act/A4-mer-extendido-jerarquias.md) - [V4: Médicos sin Frontera (DER)](https://www.youtube.com/watch?v=m5PmSXG75GA) - [E2](act/E2-mer-extendido.md) |
+| 03 | [Modelo Lógico Fase I](doc/C3-modelo-logico-1-contenido.md) | [A5](act/A5-ml-fase-i-reestructuracion.md) - [V5: Médicos sin Frontera (ML FI: Reestructuración)](https://www.youtube.com/watch?v=JorZw-IQK0I) |
+| 04 | [Modelo Relacional](doc/C4-modelo-relacional-contenido.md)  |  |
+| 05 | [Modelo Lógico Fase II](doc/C5-modelo-logico-2-contenido.md) | [A6](act/A6-ml-fase-ii-transformacion.md) - [E3](act/E3-ml.md) |
+| 06 | [Normalización](doc/C6-normalizacion-contenido.md)           | |
+| 07 | [Modelo Físico - SQL](doc/C7-modelo-fisico-sql-contenido.md) | [Video: Guía para elegir BD](https://www.youtube.com/watch?v=859UkoFr56c) - [Los videos están en el Genially](https://view.genially.com/663e9310d1c0da001435a220/presentation-lenguaje-sql) |
 
 ## Bibliografía
 
@@ -47,7 +47,7 @@
 
 | Herramienta | URL | Videos |
 | -- | -- | -- |
-| **Caser 2.0**  | [https://sedici.unlp.edu.ar/handle/10915/47130](https://sedici.unlp.edu.ar/handle/10915/47130) | 1. [Descarga](https://drive.google.com/file/d/1pe6Xz2ORhuI_f5fnetR-NJSZozUBo0Qj/view) - 2. [Video descarga](https://youtu.be/ZRT2XUGF-aI?si=njwLOP1A0xeVEC-Q) - 3. [Video interface](https://youtu.be/EQcP8tRxxGY?si=Bp4AImVjQNWmjvE6) |
+| **Caser 2.0**  | [https://sedici.unlp.edu.ar/handle/10915/47130](https://sedici.unlp.edu.ar/handle/10915/47130) - [Descarga](https://drive.google.com/file/d/1pe6Xz2ORhuI_f5fnetR-NJSZozUBo0Qj/view) | [Video descarga](https://youtu.be/ZRT2XUGF-aI?si=njwLOP1A0xeVEC-Q) - [Video interface](https://youtu.be/EQcP8tRxxGY?si=Bp4AImVjQNWmjvE6) |
 | **Draw.io**    | [https://app.diagrams.net/](https://app.diagrams.net/) | [Video](https://youtu.be/L_1mJ2OR_C8?si=NadO7hlMp1ldztjs) |
 | **LucidChart** | [https://www.lucidchart.com/pages/es](https://www.lucidchart.com/pages/es) | [Video](https://www.youtube.com/watch?v=5csQ9Nrn53I) |
 
@@ -55,19 +55,19 @@
 
 | Semana | Fecha | Tema/Actividades | Tarea |
 | -- | -- | -- | -- |
-| 01 | 14/08 | Presentación. U1 Modelado de Datos | ***Elección equipo de trabajo y caso de estudio. Video: ¿Qué es una BD?*** |
-| 02 | 21/08 | U2 Modelo Conceptual: Entidades y Atributos. **ACT 1** | |
-| 03 | 28/08 | U2 Modelo Conceptual: Relaciones. **ACT 2** | ***Videos sobre herramientas de SW a utilizar*** |
-| 04 | 04/09 | Consulta de los casos de estudio | ***Video: Empresa de Transporte*** |
-| 05 | 11/09 | Exposiciones del avance de los casos de estudio (DER) | ***TPO 1 entrega: 13/09*** |
-| 06 | 18/09 | U2 Modelo Conceptual: MER ext (jerarquias, relaciones recursivas, debil, calculado). **Act 3** | |
-| 07 | 25/09 | U2 Modelo Conceptual: MER ext (ternarias, agregaciones e historial). **Act 4** | ***Video: Médicos sin Frontera (DER)***  |
-| 08 | 02/10 | Exposiciones del avance de los casos de estudio (MER ext) | ***TPO 2 entrega: 4/10*** |
-| 09 | 09/10 | U3 Modelo Lógico Fase I. **Act 5** | ***Video: Médicos sin Frontera (ML FI)*** |
-| 10 | 16/10 | U4 MR. **Act 5** | |
-| 11 | 23/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **Act 6** | ***Video: Médicos sin Frontera (ML FII)***  |
-| 12 | 30/10 | Exposiciones del avance de los casos de estudio (ML y MR). **Act 6** | |
-| 13 | 06/11 | MR y Fisico en MySQL WorkBench | ***TPO 3*** |
+| 01 | 14/08 | Presentación. U1 Modelado de Datos | ***Elección equipo de trabajo y caso de estudio. V1: ¿Qué es una BD?*** |
+| 02 | 21/08 | U2 Modelo Conceptual: Entidades y Atributos. **A1** | |
+| 03 | 28/08 | U2 Modelo Conceptual: Relaciones. **A2** | ***V2: Herramientas*** |
+| 04 | 04/09 | Consulta de los casos de estudio | ***V3: Empresa de Transporte*** |
+| 05 | 11/09 | E1: Exposiciones del avance de los casos de estudio (DER) | ***TPO1 entrega: 13/09*** |
+| 06 | 18/09 | U2 Modelo Conceptual: MER ext (jerarquias, relaciones recursivas, debil, calculado). **A3** | |
+| 07 | 25/09 | U2 Modelo Conceptual: MER ext (ternarias, agregaciones e historial). **A4** | ***V4: Médicos sin Frontera (DER)***  |
+| 08 | 02/10 | E2: Exposiciones del avance de los casos de estudio (MER ext) | ***TPO2 entrega: 4/10*** |
+| 09 | 09/10 | U3 Modelo Lógico Fase I. **A5** | ***V5: Médicos sin Frontera (ML FI: Reestructuración)*** |
+| 10 | 16/10 | U4 MR. **A5** | |
+| 11 | 23/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **A6** | ***V6: Médicos sin Frontera (ML FII)***  |
+| 12 | 30/10 | E3: Exposiciones del avance de los casos de estudio (ML y MR). **A6** | |
+| 13 | 06/11 | MR y Fisico en MySQL WorkBench | ***TPO3*** |
 | 14 | 13/11 | Consulta para actividad final integradora | ***Lectura U6 Normalización y resolución del cuestionario***. ***TFI*** |
 | 15 | 20/11 | FERIADO | |
 | 16 | 17/11 |  | ***Lectura U7 Lenguajes de Consulta y resolución de ejercicios propuestos***. Cierre de Notas |
