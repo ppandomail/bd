@@ -131,3 +131,26 @@ PK de una relación (tabla) R1 (R1 y R2 no necesariamente distintas)
   | **Set Null**             | la FK es seteada a NULL. Se elimina la carrera y a la/el estudiante se le setea NULL en el valor del campo de la FK |
   | **Set Default**          | la FK es seteada a un valor por defecto. Se elimina la carrera y a la/el estudiante se le setea un valor en el campo de la FK, por ejemplo, el valor 99999999999 |
 
+* ¿Qué sucede si se modifica la fila en la relación que contiene la PK referenciada por la FK?
+  * **Los ID de las PK no deben modificarse**
+
+### Restricción de Integridad Semántica
+
+* Son las restricciones dadas por las reglas de negocio
+
+  | Restricción | Ejemplo |
+  | -- | -- |
+  | Restricciones de dominio | Sexo = {F, M, X} |
+  | Valores por defecto      | Cantidad = 0     |
+  | No permitir nulos        | NOT NULL         |
+  | Restricción de unicidad  | UNIQUE           |  
+  | Restricciones que especifican una condición | (Check o Triggers) |
+  |   - Check                                   | un campo solo toma valores enteros entre 0 y 10 |
+  |   - Triggers                                | calcular automáticamente el valor de los campos calculados |
+
+## Transformación al Esquema Relacional
+
+* Las **tres reglas básicas** para convertir un esquema de ER (lógico) al esquema relacional son las siguientes:
+  * Todo tipo de **entidad** se convierte en una **tabla**
+  * Todo tipo de **interrelación N:N** se convierte en una **tabla**
+  * Todo tipo de **interrelación 1:N** da lugar al fenómeno de **"propagación de clave"** ó a la **creación** de una **nueva tabla**

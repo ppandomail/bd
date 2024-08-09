@@ -1,4 +1,4 @@
-# Modelo Lógico Fase I
+# Modelo Lógico Fase I - Reestructuración
 
 ## Diseño Lógico
 
@@ -13,7 +13,7 @@
 
 * El modelo más usado entre los DBMS actuales es el RELACIONAL
 
-## Modelo Lógico Fase I - Reestructuración
+## Modelo Lógico Fase I - Reestructuración -
 
 * Elementos del DER a transformar:
   1. Resolver atributos polivalentes de las entidades
