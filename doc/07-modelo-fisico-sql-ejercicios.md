@@ -1,3 +1,0 @@
-# Modelo Físico
-
-## Ejercicios

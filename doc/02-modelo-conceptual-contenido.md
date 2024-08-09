@@ -169,3 +169,103 @@ interconexión de entidades, relaciones y sus atributos respectivamente
   * Tiene que tener un valor conocido para cada entidad, no puede ser nulo
 
   ![ID](img/id.png)
+
+### Relación
+
+* Son vínculos entre una o varias entidades
+* Pueden tener atributos
+* **No** pueden tener atributos identificadores en el modelo conceptual
+* En los documentos de requisitos la aparición de **verbos** podrá indicarnos, la existencia de una relación en el MER
+
+* **Notación**: se denotan con un rombo. Nombre de la relación verbo o vervo seguido de una preposición.
+
+  ![Relación](img/relacion.png)
+
+* Ejemplo:
+
+  ```plain
+  Existe un estudiante con los datos:
+    Nombre: Juan Apellido: Pérez DNI: 20.123.456
+    Legajo: 234569/5 Mail: juan_perez@gmail.com
+    Dirección: Rivadavia 456 
+    Teléfono: 236-444897
+  Que cursa la asignatura con los datos:
+    Nombre: Introducción a las bases de datos
+    Código: 726
+  ```
+
+* Ejemplos:
+  * Los estudiantes cursan asignaturas
+  * Un estudiante puede cursar muchas asignaturas
+  * Una asignatura puede estar en varias carreras
+  * Un curso de posgrado no se abre para menos de 10 o más de 30 estudiantes
+
+* **Características**:
+
+  ||||
+  | -- | -- | -- |
+  | **Grado**        | Indica la cantidad de entidades involucradas en una relación | unarias o recursivas, binarias, ternarias, n-arias |
+  | **Cardinalidad** | Número mínimo y máximo de ejemplares de una entidad que puede vincularse con un ejemplar de la otra entidad. Es un tipo de restricción que se utiliza para comprobar y mantener la calidad de los datos | |
+  | **Conectividad** | Tipos de relación de acuerdo a su cardinalidad máxima | 1:1, 1:N, N:N ó N:M |
+  | **Participación** | Importancia de la cardinalidad mínima | **total** (participación obligatoria) o **parcial** (participación no obligatoria) |
+
+* **Notación cardinalidad**: par ordenado para cada entidad que participa en la relación (card min, card max). Representamos la cardinalidad de la entidad en la relación, ubicándola al lado de ella.
+  * Ejemplo: un empleado trabaja en un único departamento de forma obligatoria. En el departamento trabajan muchos empleados. Como mínimo debe trabajar un empleado en el mismo
+
+    ![Cardinalidad](img/cardinalidad.png)
+
+* **Conectividad N:N**: Los empleados son asignados a proyectos, en una fecha en cada proyecto en particular
+
+    ![Conectividad N:N](img/n-n.png)
+
+* **Conectividad 1:N**: Cada empleado trabaja en un único departamento de forma obligatoria
+
+    ![Conectividad 1:N](img/1-n.png)
+
+* **Conectividad 1:N**: Los empleados pueden o no afiliarse a un sindicato
+
+    ![Conectividad 1:N](img/1-n-bis.png)
+
+* **Conectividad 1:1**: Los empleados deben tener licencia de conducir
+
+    ![Conectividad 1:1](img/1-1.png)
+
+* **Conectividad 1:1**: Los empleados pueden tener licencia de conducir
+
+    ![Conectividad 1:1](img/1-1-bis.png)
+
+* **Conectividad 1:1**: Los empleados pueden tener asignada una computadora. Las computadoras pueden no estar asignadas a nadie
+
+    ![Conectividad 1:1](img/1-1-tri.png)
+
+* **Relaciones unarias o recursivas**: es una relación de una entidad consigo misma
+
+* **Ejemplos relaciones unarias**: Hay empleados que son jefes de otros empleados. Los empleados tienen una pareja de trabajo en equipo
+
+    ![Relaciones unarias](img/unarias.png)
+
+## MER extendido
+
+* Extensiones al MER básico propuesto por Peter Chen
+
+### Entidades fuertes y débiles
+
+* Dadas dos entidades A y B, se dice que la entidad A tiene **dependencia de existencia** de
+B entonces:
+  * Un ejemplar de A depende de la existencia de un ejemplar de B
+  * Si un ejemplar de B se borra, se han de borrar los ejemplares dependientes de ella en A
+* Siempre la cardinalidad de la entidad débil es (1,1)
+
+  ![Entidad débil](img/debil.png)
+
+### Jerarquías y subconjuntos (concepto de herencia)
+
+* 
+
+### Restricciones
+
+### Agregaciones
+
+### Historia en la BD
+
+

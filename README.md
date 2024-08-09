@@ -4,7 +4,11 @@
 
 * Mg. Ing. Pablo Pandolfo
 
-## Objetivos
+## Objetivo General
+
+* Comprender los conceptos y principios en los que se fundamenta la Teoría de Bases de Datos, los cuales le permitirán diseñar, usar e implementar Modelos de Bases de Datos de forma computacionalmente eficiente
+
+## Objetivos Específicos
 
 * Comprender el papel que desempeñan los modelos de datos en el diseño de BD
 * Realizar el modelo de una BD relacional, a partir de la especificación de requerimientos de un sistema, comprendiendo y aplicando los conceptos y transformaciones de los modelos (Conceptual y Lógico) implicados
@@ -13,15 +17,15 @@
 
 ## Programa
 
-| Unidad | Contenido | Videos | Ejercicios |
-| -- | -- | -- | -- |
-| 01 | [Modelado de Datos](doc/01-modelado-datos-contenido.md)      | [¿Qué es una Base de Datos?](https://youtu.be/6S8A-1jBD5Y?si=qbi_cQbx0bK1sUuu) | [Ejercicios](doc/01-modelado-datos-ejercicios.md) |
-| 02 | [Modelo Conceptual](doc/02-modelo-conceptual-contenido.md)   | 1. [Empresa de Transporte](https://youtube.com/playlist?list=PLBPPvTp9AhDQXL-8T4mP79h9fs3CRf0bk&si=LlCrz8bR1Cj6_ho8) - 2. [Resolución del Caso ONG: Médicos sin Frontera DER](https://www.youtube.com/watch?v=m5PmSXG75GA) | [Ejercicios](doc/02-modelo-conceptual-ejercicios.md) |
-| 03 | [Modelo Lógico Fase I](doc/03-modelo-logico-1-contenido.md)  | 1. [Resolución del Caso ONG: Médicos sin Frontera. Modelo Lógico Fase I](https://www.youtube.com/watch?v=JorZw-IQK0I) | [Ejercicios](doc/03-modelo-logico-2-ejercicios.md) |
-| 04 | [Modelo Relacional](doc/04-modelo-relacional-contenido.md)   | 1. [Modelo lógico Fase I](https://youtu.be/v-nN8uCH8VA?si=qOnFoc_RhdoIOUny) - 2. [Resolución del Caso ONG Médicos sin Fronteras. Modelo Lógico Fase I: Reestructuración del DER](https://youtu.be/JorZw-IQK0I?si=oEFcDjHWYQTvnrci) - 3. [Guía para elegir BD](https://www.youtube.com/watch?v=859UkoFr56c) - 4. [Productos del mercado](https://www.youtube.com/watch?v=8Ch5s3F688w) | [Ejercicios](doc/04-modelo-relacional-ejercicios.md) |
-| 05 | [Modelo Lógico Fase II](doc/05-modelo-logico-2-contenido.md)  | 1. [Modelo Lógico Fase II](https://youtu.be/iiARpn3-f5s?si=AuSbSC-rzkr4Cp8L) | [Ejercicios](doc/05-modelo-logico-2-ejercicios.md) |
-| 06 | [Normalización](doc/06-normalizacion-contenido.md)           | | [Ejercicios](doc/06-normalizacion-ejercicios.md) |
-| 07 | [Modelo Físico - SQL](doc/07-modelo-fisico-sql-contenido.md) | 1. [Los videos están en el Genially](https://view.genially.com/663e9310d1c0da001435a220/presentation-lenguaje-sql) | [Ejercicios](doc/07-modelo-fisico-sql-ejercicios.md) |
+| Unidad | Contenido | Actividades |
+| -- | -- | -- |
+| 01 | [Modelado de Datos](doc/01-modelado-datos-contenido.md)      | [Video: ¿Qué es una Base de Datos?](https://youtu.be/6S8A-1jBD5Y?si=qbi_cQbx0bK1sUuu) |
+| 02 | [Modelo Conceptual](doc/02-modelo-conceptual-contenido.md)   | [ACT 1](act/1-MER-Entidades-Atributos) - [ACT 2](act/2-MER-Relaciones.md) - [Video: Empresa de Transporte](https://youtube.com/playlist?list=PLBPPvTp9AhDQXL-8T4mP79h9fs3CRf0bk&si=LlCrz8bR1Cj6_ho8) - [ACT 3](act/3-MER-Extendido.md) - [ACT 4](act/4-MER-Extendido-Jerarquias.md) - [Video: Médicos sin Frontera DER](https://www.youtube.com/watch?v=m5PmSXG75GA) |
+| 03 | [Modelo Lógico Fase I](doc/03-modelo-logico-1-contenido.md)  | [ACT 5](act/5-ML-Fase-I.md) - [Video: Médicos sin Frontera (ML FI)](https://www.youtube.com/watch?v=JorZw-IQK0I) |
+| 04 | [Modelo Relacional](doc/04-modelo-relacional-contenido.md)   | [Video: Modelo lógico Fase I](https://youtu.be/v-nN8uCH8VA?si=qOnFoc_RhdoIOUny) - [Video: Médicos sin Fronteras. Modelo Lógico Fase I: Reestructuración del DER](https://youtu.be/JorZw-IQK0I?si=oEFcDjHWYQTvnrci) - [Guía para elegir BD](https://www.youtube.com/watch?v=859UkoFr56c) - [Productos del mercado](https://www.youtube.com/watch?v=8Ch5s3F688w) |
+| 05 | [Modelo Lógico Fase II](doc/05-modelo-logico-2-contenido.md)  | [ACT 6](act/6-ML-Fase-II.md) - [Modelo Lógico Fase II](https://youtu.be/iiARpn3-f5s?si=AuSbSC-rzkr4Cp8L) |
+| 06 | [Normalización](doc/06-normalizacion-contenido.md)           | |
+| 07 | [Modelo Físico - SQL](doc/07-modelo-fisico-sql-contenido.md) | [Los videos están en el Genially](https://view.genially.com/663e9310d1c0da001435a220/presentation-lenguaje-sql) |
 
 ## Bibliografía
 
@@ -49,31 +53,35 @@
 
 ## Cronograma
 
-| Semana | Fecha | Tema/Actividades |
-| -- | -- | -- |
-| 01 | 14/08 | Presentación. U1 Modelado de Datos. ***Elección equipo de trabajo y caso de estudio. Video: ¿Qué es una BD?*** |
-| 02 | 21/08 | U2 Modelo Conceptual: Entidades y Atributos. **Act 1** |
-| 03 | 28/08 | U2 Modelo Conceptual: Relaciones. **Act 2** ***Videos sobre herramientas de SW a utilizar*** |
-| 04 | 04/09 | Consulta de los casos de estudio. ***Video: Empresa de Transporte*** |
-| 05 | 11/09 | Exposiciones del avance de los casos de estudio (DER). ***TPO 1 entrega: 13/09*** |
-| 06 | 18/09 | U2 Modelo Conceptual: MER ext (jerarquias, relaciones recursivas, debil, calculado). **Act 3** |
-| 07 | 25/09 | U2 Modelo Conceptual: MER ext (ternarias, agregaciones e historial). **Act 4**. ***Video: Médicos sin Frontera (DER)***  |
-| 08 | 02/10 | Exposiciones del avance de los casos de estudio (MER ext). ***TPO 2 entrega: 4/10*** |
-| 09 | 09/10 | U3 Modelo Lógico Fase I. **Act 5**. ***Video: Médicos sin Frontera (ML FI)*** |
-| 10 | 16/10 | U4 MR. **Act 5** |
-| 11 | 23/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **Act 6**. ***Video: Médicos sin Frontera (ML FII)***  |
-| 12 | 30/10 | Exposiciones del avance de los casos de estudio (ML y MR). **Act 6** |
-| 13 | 06/11 | MR y Fisico en MySQL WorkBench. ***TPO 3*** |
-| 14 | 13/11 | Consulta para actividad final integradora. ***Lectura U6 Normalización y resolución del cuestionario***. ***TFI*** |
-| 15 | 20/11 | FERIADO |
-| 16 | 17/11 | ***Lectura U7 Lenguajes de Consulta y resoluciñon de ejercicios propuestos***. Cierre de Notas |
+| Semana | Fecha | Tema/Actividades | Tarea |
+| -- | -- | -- | -- |
+| 01 | 14/08 | Presentación. U1 Modelado de Datos | ***Elección equipo de trabajo y caso de estudio. Video: ¿Qué es una BD?*** |
+| 02 | 21/08 | U2 Modelo Conceptual: Entidades y Atributos. **ACT 1** | |
+| 03 | 28/08 | U2 Modelo Conceptual: Relaciones. **ACT 2** | ***Videos sobre herramientas de SW a utilizar*** |
+| 04 | 04/09 | Consulta de los casos de estudio | ***Video: Empresa de Transporte*** |
+| 05 | 11/09 | Exposiciones del avance de los casos de estudio (DER) | ***TPO 1 entrega: 13/09*** |
+| 06 | 18/09 | U2 Modelo Conceptual: MER ext (jerarquias, relaciones recursivas, debil, calculado). **Act 3** | |
+| 07 | 25/09 | U2 Modelo Conceptual: MER ext (ternarias, agregaciones e historial). **Act 4** | ***Video: Médicos sin Frontera (DER)***  |
+| 08 | 02/10 | Exposiciones del avance de los casos de estudio (MER ext) | ***TPO 2 entrega: 4/10*** |
+| 09 | 09/10 | U3 Modelo Lógico Fase I. **Act 5** | ***Video: Médicos sin Frontera (ML FI)*** |
+| 10 | 16/10 | U4 MR. **Act 5** | |
+| 11 | 23/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **Act 6** | ***Video: Médicos sin Frontera (ML FII)***  |
+| 12 | 30/10 | Exposiciones del avance de los casos de estudio (ML y MR). **Act 6** | |
+| 13 | 06/11 | MR y Fisico en MySQL WorkBench | ***TPO 3*** |
+| 14 | 13/11 | Consulta para actividad final integradora | ***Lectura U6 Normalización y resolución del cuestionario***. ***TFI*** |
+| 15 | 20/11 | FERIADO | |
+| 16 | 17/11 |  | ***Lectura U7 Lenguajes de Consulta y resolución de ejercicios propuestos***. Cierre de Notas |
 
 ## Criterios de evaluación
 
 * **Regularidad**
   * 75% asistencia
-  * Aprobación dos parciales
+  * Realizar exposiciones grupales sobre la resolución de los casos de estudio
   * Aprobación TPs Obligatorio
+  * Aprobación TFI individual en la primera instancia o en la isntancia de recuperatorio
 
 * **Final**
   * Final, de contenido teórico-práctico
+
+* **Promoción**
+  * Se debe tener una nota promedio de 7 o superior entre los TPOs y el TFI, en cualquiera de sus instancias. Quienes no obtenga ese promedio deberán rendir examen final
