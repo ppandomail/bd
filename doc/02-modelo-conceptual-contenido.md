@@ -260,12 +260,104 @@ B entonces:
 
 ### Jerarquías y subconjuntos (concepto de herencia)
 
-* 
+* Jerarquías introducen el concepto de "herencia" en el MER
+
+* **Por Especialización**: es una representación que permite crear una entidad con atributos comunes a varias entidades y luego **subentidades** que especializan el concepto de la **superentidad**
+
+  ![Especialización](img/especializacion.png)
+
+* **Por Generalización**: permite extraer propiedades comunes de varias entidades y generar con ellas una superentidad que las aglutina. Es en el sentido contrario de especialización
+
+  ![Generalización](img/generalizacion.png)
+
+* **Cobertura**: define el grado de la relación entre la superentidad y las subentidades. (Relación "es un" dada de forma impícita por la herencia)
+
+  |||
+  | -- | -- |
+  | **Total**       | cuando cada ejemplar de la superentidad está contenido obligatoriamente en alguna de las subtentidades     |
+  | **Parcial**     | cuando pueden exisir ejemplares de la superentidad que no estén contenidos en ninguna de las subentidades  |
+  | **Exclusiva**   | si un ejemplar de la superentidad está relacionado con una sola subentidad |
+  | **Superpuesta** | si un ejemplar de la superentidad está relacionado con más de una subentidad |
+
+  ![Coberturas](img/coberturas.png)
+
+  ![Jerarquías](img/jerarquia.png)
+
+* **Subconjunto**: representan un caso especial de la jerarquía. Hay situaciones en donde sólo se desprende una sola subentidad.No es necesario colocar la cobertura, ya que ésta nunca será total, si no sería una copia exacta de la superentidad. Además, no puede ser superpuesta, ya que no hay otra subentidad con la que superponerse. Por lo tanto, un subconjunto siempre es Parcial y Exclusivo, y, por ende, no se anota la cobertura
+
+  ![Subconjunto](img/subconjunto.png)
 
 ### Restricciones
 
-### Agregaciones
+* **De Exclusividad**: Dos o más relaciones tienen una restricción de exclusividad con respecto a una entidad que participa en ambas relaciones, si cada ejemplar de la entidad sólo puede participar en una y sólo una de las relaciones, es decir, no puede participar en ambas a la vez. Ejemplo: un libro es editado por un editorial o por la universidad, nunca por ambos
+
+  ![Restricción de Exclusividad](img/exclusividad.png)
+
+* **De Inclusividad**: se presenta cuando todo ejemplar de una entidad A que participa en una relación R2, ha tenido que participar obligatoriamente de forma previa en la relación R1. Ejemplo: supongamos que ahora un profesor sólo puede impartir clases en nuestro programa de doctorado si ha realizado al menos un curso dentro del mismo
+
+  ![Restricción de Inclusividad](img/inclusividad.png)
+
+### Ejercicio
+
+1. Una empresa constructora tiene diferentes empleados. De todos ellos se sabe su CUIT, su DNI, nombre, teléfono y dirección. Los empleados son contratados en relación de dependencia, es decir, cobran un salario mensual y por horas
+1. De los asalariados se sabe su sueldo mensual, el porcentaje de descuentos y los aportes
+1. De los contratados por Jornada se almacenan la cantidad de horas trabajadas, los días trabajados, el precio por hora y el servicio que prestan que puede ser plomería, electricidad, etc.
+1. Además, los empleados asalariados pueden ser administrativos, albañiles y arquitectos
+1. De los arquitectos se sabe su número de matrícula y universidad donde obtuvo la titulación
+1. De los administrativos se sabe qué tipo de tarea hacen y si tiene o no título secundario. Las tareas pueden ser telefonista, administrativo, seguridad y aseo
 
 ### Historia en la BD
 
+* Modelar fechas o períodos de tiempo
+* Ejemplo: un empleado trabaja en un proyeto durante un período de tiempo
+* Cuando deja de trabajar en el proyecto, deja de participar de la relación
 
+  ![Sin historia](img/sin-historia.png)
+
+* **Introduciendo la HISTORIA**: sr refleja el paso del tiempo - relación N:N
+
+  ![Con historia](img/con-historia.png)
+
+* **Historia en las entidades**: Ejemplo, tenemos la entidad empleados que trabajan en un supermercado y se sabe, además de sus datos personales y su cargo, la fecha de inicio en que comenzó a trabajar y en el caso de que ya no trabaje más, se sabe su fecha de fin de las actividades en el supermercado. De esta forma, con las fechas, podemos saber qué empleados forman y formaron parte del supermercado
+
+  ![Historia entidad](img/historia-entidad.png)
+
+### Relaciones ternarias
+
+* Es una interrelación que relaciona a tres entidades
+* Pueden llegar a ser confusas en su interpretación semántica dependiendo de la cardinalidad
+* Por esta razón, algunos autores no las definen ni las usan y buscan modelar lo mismo con relaciones binarias
+* Solo las usaremos cuando las tres entidades participen con card. Máx = N
+* Ejemplo: UdD trata de una organización que asigna proyectos a sus empleados de sus distintos departamentos. Reglas de negocio:
+* En la organización hay departamentos, cada empleado pertenece a un departamento de forma única
+
+  ![Ternaria](img/ternaria-1.png)
+
+* En los departamentos se originan proyectos y estos proyectos se dividen en tareas
+
+  ![Ternaria](img/ternaria-2.png)
+
+* En las tareas se utilizan insumos de distintos proveedores, se necesita almacenar qué insumos fueron provistos por ciertos proveedores en cada tarea y en qué fecha
+
+  ![Ternaria](img/ternaria-3.png)
+
+* Distintos proveedores suministran distintos tipos de componentes a distintos proyectos
+
+  ![Ternaria](img/ternaria-4.png)
+
+* Algunos autores plantean solamente representar relaciones binarias
+
+  ![Ternaria](img/ternaria-5.png)
+
+### Agregaciones
+
+* Concepto muy variante de acuerdo a la bibliografía utilizada
+* Cuando se genera una relación ternaria, tres entidades confluyen en ella. En ciertos casos esta representación pierde claridad o expresividad. (algunos autores las consideran incorrectas)
+* La agregación permite visualizar a un par de entidades y una relación como una gran entidad que a su vez se relaciona con otra
+* Ejemplo: El **empleado** participa en muchos **proyectos**, pero en cada proyecto, el empleado realiza una **tarea** particular. Pero una tarea en un proyecto, puede ser realizada por más de un empleado
+
+  ![Agregacion](img/agregacion-1.png)
+
+* Ejemplo: Una agencia de Recursos Humanos ENTREVISTA varios CANDIDATOS para varias EMPRESAS. La entrevista puede dar lugar a una OFERTA de TRABAJO
+
+  ![Agregacion](img/agregacion-2.png)
