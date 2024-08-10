@@ -1,6 +1,6 @@
 # Modelado de datos
 
-* El **modelado de datos** es una parte esencial para el Diseño de **Bases de Datos** (BD)
+* Es una parte esencial para el Diseño de **Bases de Datos** (BD)
 * Las BD son una de las principales componentes de un **Sistema de Información** (SI)
 
   ![BD y SI](img/bd-si.png)
@@ -27,8 +27,7 @@
 
 ## ¿Qué es una BD?
 
-* Es una colección de datos interrelacionados con un propósito específico vinculado a la resolución de un problema del mundo real. (Bertone y Thomas, 2011)
-* **Conjunto de datos almacenados, representando entidades y sus relaciones, lógicamente coherente** (no hay contradicción entre los datos relacionados ni pérdida de información, aún ante uso compartido), **con significado implícito** (representa aspectos del universo de discurso "UdeD", Datos + contexto = Información) **y persistente** (los datos permanecen en el tiempo)
+* Es una **colección de datos interrelacionados** con un propósito específico vinculado a la resolución de un problema del mundo real. (Bertone y Thomas, 2011)
 * Por ejemplo: BD de provincias
 
 | centroide_lat | centroide_lon | id | nombre | nombre_completo |
@@ -69,7 +68,7 @@
 * La arquitectura ANSI-SPARC (American National Standards Institute, Standards Planning And Requirements Committee), es un estándar de diseño abstracto para DBMS, propuesto por primera vez en 1975 por la empresa ANSI
 * La mayoría de los DBMS comerciales modernos se basan en este sistema
 * El modelo ANSI-SPARC a pesar de ser el más usado, nunca se convirtió en un estándar formal
-* También se lo llama arquitectura de tres capas o de tres niveles
+* También se lo llama arquitectura de tres capas o niveles
 * Lo que busca es separar la vista de los usuarios de los datos, de manera que ésta no los afecte
   * Permite vistas de usuario independientes y personalizadas (No interfieren entre sí)
   * Oculta los detalles físicos de almacenamiento a los usuarios.
@@ -197,12 +196,3 @@ etc., "metadatos") y es relativamente invariante en el tiempo
   * Modelo orientado a objetos
   * Modelo de datos semántico
   * Modelo de datos funcional
-
-  ```plain
-  El objetivo de esta asignatura es
-  presentar una Metodología de Diseño
-  de Bases de Datos Relacionales
-  basada en el Modelo Entidad-Relación
-  y conocer el Lenguaje de Consulta que
-  se usa para manipularlas
-  ```
