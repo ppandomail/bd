@@ -19,7 +19,7 @@
 
 | Unidad | Contenido | Actividades |
 | -- | -- | -- |
-| 01 | [Modelado de Datos](doc/C1-modelado-datos-contenido.md)     | [Elegir Equipo + Caso](act/A0-casos-de-estudio.md) - [V1: ¿Qué es una Base de Datos?](https://youtu.be/6S8A-1jBD5Y?si=qbi_cQbx0bK1sUuu) |
+| 01 | [Modelado de Datos](doc/C1-modelado-datos-contenido.md)     | [Elegir Equipo + Caso](act/A0-casos-de-estudio.md) - [V1: ¿Qué es una BD?](https://youtu.be/6S8A-1jBD5Y?si=qbi_cQbx0bK1sUuu) |
 | 02 | [Modelo Conceptual](doc/C2-modelo-conceptual-contenido.md)  | [A1](act/A1-mer-entidades-atributos.md) - [A2](act/A2-mer-relaciones.md) - [V2: Herramientas](#herramientas) - [V3: Empresa de Transporte](https://youtube.com/playlist?list=PLBPPvTp9AhDQXL-8T4mP79h9fs3CRf0bk&si=LlCrz8bR1Cj6_ho8) - [E1](act/E1-mer.md) - [A3](act/A3-mer-extendido.md) - [A4](act/A4-mer-extendido-jerarquias.md) - [V4: Médicos sin Frontera (DER)](https://www.youtube.com/watch?v=m5PmSXG75GA) - [E2](act/E2-mer-extendido.md) |
 | 03 | [Modelo Lógico Fase I](doc/C3-modelo-logico-1-contenido.md) | [A5](act/A5-ml-fase-i-reestructuracion.md) - [V5: Médicos sin Frontera (ML FI: Reestructuración)](https://www.youtube.com/watch?v=JorZw-IQK0I) |
 | 04 | [Modelo Relacional](doc/C4-modelo-relacional-contenido.md)  |  |
@@ -31,11 +31,11 @@
 
 ||
 | -- |
-| [Introducción a las Bases de Datos. Fundamentos y Diseño (Bertone, R.; Thomas, P.](biblio/introducción-a-las-bases-de-datos-bertone.pdf) |
+| [Introducción a las Bases de Datos. Fundamentos y Diseño (Bertone, R.; Thomas, P.)](biblio/introducción-a-las-bases-de-datos-bertone.pdf) |
 | [Diseño conceptual de bases de datos. Un enfoque de entidades-interrelaciones (Batini, B.; Ceri, S.; Navate, S.)](biblio/diseño-conceptual-de-bases-de-datos-battini.pdf) |
 | Introducción a los sistemas de bases de datos (Date, C.J & Date, C.J) |
 | Database Systems. Design, Implementation and Management (Coronel, M. ; Morris, S.) |
-| Desarrollo de Bases de Datos. Casos prácticos desde el análisis a la implementación (Cuadra, D. ) |
+| Desarrollo de Bases de Datos. Casos prácticos desde el análisis a la implementación (Cuadra, D.) |
 | [Fundamentos de Sistemas de Bases de Datos (Elmasri, R. ; Navathe S. B.)](biblio/fundamentos-de-sistemas-de-bases-de-datos-elmasri-navathe.pdf) |
 | Fundamentos de diseño y modelado de datos (Morteo, F.; Bocalandro, N.) |
 | Diseño de bases de datos relacionales (Piñeiro Gómez, J.M.) |
@@ -67,8 +67,8 @@
 | 10 | 16/10 | U4 MR. **A5** | |
 | 11 | 23/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **A6** | ***V6: Médicos sin Frontera (ML FII)***  |
 | 12 | 30/10 | E3: Exposiciones del avance de los casos de estudio (ML y MR). **A6** | |
-| 13 | 06/11 | MR y Fisico en MySQL WorkBench | ***TPO3*** |
-| 14 | 13/11 | Consulta para actividad final integradora | ***Lectura U6 Normalización y resolución del cuestionario***. ***TFI*** |
+| 13 | 06/11 | MR y Físico en MySQL WorkBench | ***TPO3*** |
+| 14 | 13/11 | Consulta para TFI | ***Lectura U6 Normalización y resolución del cuestionario***. ***TFI*** |
 | 15 | 20/11 | FERIADO | |
 | 16 | 17/11 |  | ***Lectura U7 Lenguajes de Consulta y resolución de ejercicios propuestos***. Cierre de Notas |
 
@@ -77,8 +77,8 @@
 * **Regularidad**
   * 75% asistencia
   * Realizar exposiciones grupales sobre la resolución de los casos de estudio
-  * Aprobación TPs Obligatorio
-  * Aprobación TFI individual en la primera instancia o en la isntancia de recuperatorio
+  * Aprobación TPOs
+  * Aprobación TFI individual en la primera instancia o en la instancia de recuperatorio
 
 * **Final**
   * Final, de contenido teórico-práctico

@@ -1,6 +1,6 @@
 # Modelado de datos
 
-* Es una parte esencial para el Diseño de **Bases de Datos** (BD)
+* Parte esencial para el Diseño de **Bases de Datos** (BD)
 * Las BD son una de las principales componentes de un **Sistema de Información** (SI)
 
   ![BD y SI](img/bd-si.png)
@@ -8,7 +8,7 @@
   * Sistemas de bancos, compras online, sistemas de salud, de reservas de vuelos, hoteles, bibliotecas, etc.
   * BD Multimedia para almacenamiento y recuperación de imágenes, videos, etc.
   * Sistemas de Información Geográfica (GIS)
-  * BD de gran capacidad, sistemas big data, BD No-SQL, BD para dispositivos móviles, etc.
+  * BD de gran capacidad, sistemas big data, BD NoSQL, BD para dispositivos móviles, etc.
 
 ## Sistemas de Información (SI)
 
@@ -17,7 +17,7 @@
 
   |||
   | -- | -- |
-  | **DATO**         | conjunto limitado de propiedades que describe un hecho |
+  | **DATO**         | conjunto finito de propiedades que describe un hecho |
   | **INFORMACIÓN**  | tiene significado (semántica, relevancia y propósito) |
   | **CONOCIMIENTO** | experiencia, valores, información y know-how |
   | **SABIDURÍA**    | aplicar el conocimiento para mejorar la acción |
@@ -49,8 +49,8 @@
 
   |||
   | -- | -- |
-  | **Dominio de un problema**    | Deberemos seleccionar la información a representar de un **dominio** de un problema específico. Realizar el **proceso de abstracción** |
-  | **Esquema de representación** | **Diseñar el esquema** de representación de los datos (interrelación) que cumpla con ciertas características |
+  | **Dominio de un problema**    | seleccionar la información a representar de un **dominio** de un problema específico mediante el **proceso de abstracción** |
+  | **Esquema de representación** | **diseñar el esquema** de representación de los datos (interrelación) que cumpla con ciertas características |
 
 ## ¿Qué es un DBMS o SGBD?
 
@@ -62,16 +62,14 @@
 * Oracle, Informix, SQL Server, PostgreSQL, MySQL, etc.
 * Ranking: [https://db-engines.com/en/ranking](https://db-engines.com/en/ranking)
 
-## Arquitectura ANSI-SPARC
+## Arquitectura ANSI-SPARC (American National Standards Institute, Standards Planning And Requirements Committee)
 
-* Hasta ahora los DBMS mencionados se ajustan a la arquitectura estándar denominada **ANSI-SPARC**
-* La arquitectura ANSI-SPARC (American National Standards Institute, Standards Planning And Requirements Committee), es un estándar de diseño abstracto para DBMS, propuesto por primera vez en 1975 por la empresa ANSI
+* Es un estándar de diseño abstracto para DBMS, propuesto en 1975 por la empresa ANSI
 * La mayoría de los DBMS comerciales modernos se basan en este sistema
-* El modelo ANSI-SPARC a pesar de ser el más usado, nunca se convirtió en un estándar formal
 * También se lo llama arquitectura de tres capas o niveles
-* Lo que busca es separar la vista de los usuarios de los datos, de manera que ésta no los afecte
+* Busca separar la vista de los usuarios de los datos, de manera que ésta no los afecte
   * Permite vistas de usuario independientes y personalizadas (No interfieren entre sí)
-  * Oculta los detalles físicos de almacenamiento a los usuarios.
+  * Oculta los detalles físicos de almacenamiento a los usuarios
   * El administrador de la BD (DBA) debe ser capaz de cambiar las estructuras de almacenamiento de la BD sin afectar la vista de los usuarios (independencia lógica)
   * La estructura interna de la base de datos no debería verse afectada por cambios en los aspectos físicos del almacenamiento (independencia física)
 
@@ -83,11 +81,11 @@
 
 ### Niveles
 
-| Nivel ||
+| Nivel | Se refiere a ... |
 | -- | -- |
-| **Externo**    | se refiere a las vistas que visualizan los usuarios (una parte de la BD) |
-| **Conceptual** | se describen los datos que se almacenan en la BD, sus restricciones y las relaciones que existen entre éstos |
-| **Interno**    | se refiere a cómo se almacenan físicamente los datos, se describen estructuras de datos complejas |
+| **Externo**    | las vistas que visualizan los usuarios (una parte de la BD) |
+| **Conceptual** | los datos que se almacenan en la BD, sus restricciones y las relaciones que existen entre éstos |
+| **Interno**    | cómo se almacenan físicamente los datos, se describen estructuras de datos complejas |
 
 ![Arquitectura en 3 Niveles](img/niveles.png)
 
@@ -97,10 +95,10 @@
 
 ### Se puede lograr
 
-| Independencia | |
-| -- | -- |
-| **Lógica** | se puede modificar la estructura de la BD sin la necesidad de reescribir las aplicaciones (esquema externo o vistas de usuarios) |
-| **Física** | se puede alterar la estructura física de la BD sin la necesidad de alterar su estructura lógica (esquema conceptual) |
+| Independencia | Se puede modificar la estructura ... | Sin la necesidad de ... |
+| -- | -- | -- |
+| **Lógica** | lógica de la BD | reescribir las aplicaciones (esquema externo o vistas de usuarios) |
+| **Física** | física de la BD | alterar su estructura lógica (esquema conceptual) |
 
 ## Modelo de datos
 
@@ -118,10 +116,10 @@
 
   ![Modelo de Datos](img/modelo-datos.png)
 
-## Universo del discurso
+## Universo del discurso o dominio del discurso o dominio (UdD)
 
-* En lógica, el **dominio de discurso**, también llamado universo de discurso, o simplemente dominio, es el conjunto de cosas acerca de las cuales se habla en un determinado contexto
-* Dependiendo del dominio de discurso, una misma proposición podrá ser verdadera o falsa
+* Es el conjunto de cosas acerca de las cuales se habla en un determinado contexto
+* Dependiendo del UdD, una misma proposición podrá ser verdadera o falsa
 * Al decir **«todos son amigos»**, si se está hablando acerca de un pequeño grupo de personas, la proposición quizás sea verdadera, pero si se está hablando acerca de todo el mundo, entonces es falsa
 
 ## Niveles de representación
@@ -133,13 +131,12 @@
 
 ## Modelo y Esquema
 
-* La descripción de un cierto mundo real o universo del discurso (p.e. una Universidad, un Banco) por medio de un **modelo de datos** da como resultado un **esquema**
-* El **esquema** es la descripción de la estructura de la BD (tablas, atributos, restricciones,
-etc., "metadatos") y es relativamente invariante en el tiempo
+* La descripción de un cierto mundo real o UdD (p.e. una Universidad, un Banco) por medio de un **modelo de datos** da como resultado un **esquema**
+* El **esquema** es la descripción de la estructura de la BD (tablas, atributos, restricciones, etc., "metadatos") y es relativamente invariante en el tiempo
 
 ## Abstracción
 
-* Es un proceso que permite seleccionar algunas características del mundo real (universo del discurso), dejando de lado aquellos rasgos que no son de interés
+* Es un proceso que permite seleccionar algunas características del mundo real (UdD), dejando de lado aquellos rasgos que no son de interés
 
   | Tipos | | Ejemplo |
   | -- | -- | -- |
@@ -147,7 +144,7 @@ etc., "metadatos") y es relativamente invariante en el tiempo
   | **Agregación**     | Define una nueva clase a partir de un conjunto de otras clases que representan sus componentes | **Computadora** tiene Memoria, tiene Disco, tiene Procesador |
   | **Generalización** | Define una relación de **subconjunto** entre los elementos de dos o mas clases | Docente es una **Persona**, Estudiante es una **Persona** |
 
-* Representan las formas de pensamiento utilizadas en la construcción de las estructuras de datos de las BD
+* Representan las formas de pensamiento utilizadas en la construcción de las ED de las BD
 
   |||
   | -- | -- |
@@ -172,26 +169,27 @@ etc., "metadatos") y es relativamente invariante en el tiempo
 
 * Elementos no permitidos o **restricciones**:
 
-  ||||
+  | Restricciones |||
   | -- | -- | -- |
-  | **Restricciones inherentes** | del modelo | impuestas por la naturaleza del modelo de datos. Por ejemplo: el modelo relacional, no permite que dos ejemplares de una tabla sean iguales |
-  | **Restricciones de integridad o semánticas** | de usuario | definidas por el usuario en el esquema de la BD, son las que permiten verificar la corrección de los datos almacenados en la base |
+  | **inherentes** | del modelo | impuestas por la naturaleza del modelo de datos. Por ejemplo: el MR, no permite que dos ejemplares de una tabla sean iguales |
+  | **de integridad o semánticas** | de usuario | definidas por el usuario en el esquema de la BD, son las que permiten verificar la corrección de los datos almacenados en la BD |
 
 ## Técnicas de modelado
 
 * Los modelos se construyen utilizando técnicas de abstracción
 * Se describen mediante representaciones gráficas con una sintaxis y semántica asociadas
 * Los modelos de datos se dividen en tres grandes grupos:
-  * Modelos basados en objetos
+  * **Modelos basados en objetos**
   * Modelos basados en registros
   * Modelos de datos físicos
 
 ## Modelos basados en objetos
 
 * Se usan para describir datos en los niveles conceptual y de vistas
-* Con este modelo representamos los datos de tal forma como los captamos en el mundo real
-* Tienen una capacidad de estructuración bastante flexible y permiten especificar restricciones de datos explícitamente
-* Modelos de este tipo:
+* Se representan los datos de tal forma como se los capta en el mundo real
+* Tienen una capacidad de estructuración flexible
+* Permiten especificar restricciones de datos explícitamente
+* Tipos:
   * **Modelo Entidad-Relación** (más utilizado por su sencillez y eficiencia)
   * Modelo orientado a objetos
   * Modelo de datos semántico

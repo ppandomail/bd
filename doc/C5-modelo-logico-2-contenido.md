@@ -1,4 +1,4 @@
-# Modelo Lógico Fase I - Transformación al MR
+# Modelo Lógico Fase II - Transformación al MR
 
 ## Transformación de Entidades
 
