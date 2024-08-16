@@ -2,41 +2,40 @@
 
 ## Ingeniería de Software (IS)
 
-* Es la disciplina que abarca todos los aspectos del desarrollo de software, conocido como **ciclo de vida**
+* Es la disciplina que abarca todos los aspectos del desarrollo de software (**ciclo de vida**)
 
 ### Ciclo de vida del software. Etapas
 
-1. Comprender un problema
-1. Analizarlo (Elicitación de requerimientos)
-1. Diseñar una solución
-1. Implementar dicha solución
+1. Comprender y analizar el problema
+1. Diseñar la solución
+1. Implementar la solución
 1. Entregar el producto final
 1. Modificar el producto por nuevos requerimientos
 
 ### Diseño de BD
 
-* La metodología de diseño propuesta en este curso consiste en construir un modelo de datos en etapas:
+* La metodología de diseño consiste en construir un modelo de datos en etapas:
 
-1. **Diseño conceptual**: se lleva a cabo luego de la etapa de especificación de requerimientos, es independiente del SGBD a utilizar y da como resultado el esquema conceptual
-1. **Diseño lógico**: tiene dos fases, una de refinamiento del esquema conceptual y otra para obtener el esquema de la BD, que depende del SGBD a utilizar. Usaremos el Modelo Relacional
-1. **Diseño Físico**: es necesario tomar decisiones específicas, que tienen que ver con el SGBD específico a utilizar (índices, clusters, archivos)
+    1. **Diseño conceptual**: luego de la etapa de especificación de requerimientos, es independiente del SGBD a utilizar y da como resultado el esquema conceptual
+    1. **Diseño lógico**: tiene dos fases, una de refinamiento del esquema conceptual y otra para obtener el esquema de la BD, que depende del SGBD a utilizar. Usaremos el Modelo Relacional
+    1. **Diseño Físico**: es necesario tomar decisiones específicas, que tienen que ver con el SGBD específico a utilizar (índices, clusters, archivos)
 
-  ![Proceso de Diseño de BD](img/proceso-de-diseño-de-bd.png)
+    ![Proceso de Diseño de BD](img/proceso-de-diseño-de-bd.png)
 
 * Si bien el modelado de datos forma parte de la etapa de diseño, las y los analistas no la respetaron y comenzaron a realizarlo en las etapas tempranas, como parte de la comprensión del problema, para luego refinarlo en las etapas de diseño
 
-| Modelo | Tipo de SGBD | SGBD |
-| -- | -- | -- |
-| **Conceptual** | No se debe decidir | No se debe decidir |
-| **Lógico**     | No se debe decidir | No se debe decidir |
-| **Físico**     | No se debe decidir | No se debe decidir |
+  | Modelo | Tipo de SGBD | SGBD |
+  | -- | -- | -- |
+  | **Conceptual** | No se debe decidir | No se debe decidir |
+  | **Lógico**     | No se debe decidir | No se debe decidir |
+  | **Físico**     | No se debe decidir | No se debe decidir |
 
-### Regla de Negocio
+### Regla de Negocio (requisito o requerimiento)
 
-* Descripción breve, precisa y no ambigua de una política, procedimiento o principio dentro de una organización específica. También se la llama requisito o requerimiento
-* "Las **reglas de negocio** forman parte del **Documento de Requisitos** de un sistema, que es el producto resultante de la etapa de **análisis** (elicitación de requerimientos)"
+* Descripción breve, precisa y no ambigua de una política, procedimiento o principio dentro de una organización específica
+* Forman parte del **Documento de Requisitos** de un sistema, que es el producto resultante de la etapa de **análisis**
 * Ejemplo:
-  * "Una/un estudiante se inscribe en una carrera de la Universidad"
+  * "Un/a estudiante se inscribe en una carrera de la Universidad"
   * "Una cuenta corriente en pesos en el banco puede tener giro en descubierto"
 
 ## Modelo Entidad-Relación (MER)
@@ -44,30 +43,28 @@
 * Modelo conceptual de BD
 * "Los modelos de datos conceptuales permiten representar la información de un problema en un alto nivel de abstracción"
 
-| Características ||
-| -- | -- |
-| **Expresividad** | Capturar y presentar de la mejor forma posible la semántica de los datos del problema a resolver |
-| **Minimalidad**  | Cada elemento del modelo tiene una única forma de representación |
-| **Formalidad**   | Requiere que cada elemento representado en el modelo sea preciso, bien definido y con una sola interpretación posible |
-| **Simplicidad**  | El modelo debe ser fácil de entender por todas las personas involucradas (clientes, analistas, etc.) |
+  | Características ||
+  | -- | -- |
+  | **Expresividad** | capturar y presentar de la mejor forma posible la semántica de los datos del problema a resolver |
+  | **Minimalidad**  | cada elemento del modelo tiene una única forma de representación |
+  | **Formalidad**   | requiere que cada elemento representado en el modelo sea preciso, bien definido y con una sola interpretación posible |
+  | **Simplicidad**  | el modelo debe ser fácil de entender por todas las personas involucradas (clientes, analistas, etc.) |
 
 ### Historia del MER
 
-* **Peter Chen**
-* Mientras trabajaba como profesor adjunto en la Escuela de Administración y Dirección de Empresas Sloan del MIT(Massachusetts Institute of Technology), publicó un documento influyente en 1976 llamado "Modelo entidad-relación: hacia una visión unificada de los datos", que posee las bases para la representación básica de las estructuras de datos que darán soporte a las BD
+* **Peter Chen**: publicó en 1976 un documento llamado "Modelo entidad-relación: hacia una visión unificada de los datos", que posee las bases para la representación básica de las ED que darán soporte a las BD
 
 ### ¿Qué es?
 
-* Un diagrama entidad-relación (DER), también conocido como modelo entidad relación o ERD o ER, es un tipo de diagrama de flujo que ilustra cómo las "entidades" (personas, objetos o conceptos) se relacionan entre sí dentro de un sistema
+* Un diagrama entidad-relación (DER), también conocido como MER o ERD o ER, es un tipo de diagrama de flujo que ilustra cómo las "entidades" (personas, objetos o conceptos) se relacionan entre sí dentro de un sistema
 
 ### Constructores
 
-* Emplea un conjunto definido de símbolos, tales como rectángulos, rombos, óvalos y líneas de conexión para representar la
-interconexión de entidades, relaciones y sus atributos respectivamente
+* Conjunto definido de símbolos (rectángulos, rombos, óvalos y líneas de conexión) para representar la interconexión de entidades, relaciones y sus atributos respectivamente
 
 ### Dominio
 
-* Es un reflejo de la estructura gramatical del documento de requisitos y emplea sustantivos para las entidades y verbos para las relaciones (esto es así en la mayoría de los casos)
+* Es un reflejo de la estructura gramatical del documento de requisitos y emplea sustantivos para las entidades y verbos para las relaciones
 
 ### MER - constructores básicos
 
@@ -75,11 +72,11 @@ interconexión de entidades, relaciones y sus atributos respectivamente
 * Relaciones entre esas entidades (interrelaciones)
 * Atributos
 
-* Tenemos la regla de negocio: "Una/un **estudiante** se ***inscribe*** en una **carrera** de la Universidad"
+* Ejemplo: regla de negocio "Un/a **estudiante** se ***inscribe*** en una **carrera** de la Universidad"
 
 ### Entidad
 
-* Una cosa u objeto en el mundo real que es distinguible de todos los demás objetos". (Korn)
+* Una cosa u objeto en el mundo real que es distinguible de todos los demás objetos (Korn)
 * En el Documento de Requisitos aparecen reflejadas "habitualmente" como **"sustantivos"**
 * A cada una de las posibles ocurrencias de la entidad se la denomina **"ejemplar"**
 * Tiene características o propiedades específicas - **Atributo** - que la describe
@@ -95,7 +92,7 @@ interconexión de entidades, relaciones y sus atributos respectivamente
     Mail: juan_perez@gmail.com
   ```
 
-* **Notación**: se denota con un **rectángulo**. El nombre es generalmente un sustantivo escrito en plural. Los **atributos** se denotan con **una línea y un óvalo**
+* **Notación**: **rectángulo**. El nombre es generalmente un sustantivo escrito en plural. Los **atributos** se denotan con **una línea y un óvalo**
 
   ![Entidad](img/entidad.png)
 
@@ -103,7 +100,7 @@ interconexión de entidades, relaciones y sus atributos respectivamente
 
 * Describe las características importantes de cada entidad
 * Atributo = (nombre, valor) para cada entidad
-* **Dominio del atributo**: es el conjunto de valores permitidos para un atributo (dominio de datos)
+* **Dominio del atributo**: conjunto de valores permitidos para un atributo (dominio de datos)
 * **Funciones**: identificadores y descriptores
 * Ejemplo:
 
@@ -123,7 +120,7 @@ interconexión de entidades, relaciones y sus atributos respectivamente
   | **Por comprensión** | indicando el tipo de dato | precio: "números reales mayores que cero" |
   | **Por extensión**   | definiendo los valores del conjunto | sexo = {M, F, X} |
 
-* **Tipos de datos**: Los tipos de datos básicos del estándar SQL para DBMS relaciones son:
+* **Tipos de datos básicos**:
 
   |||
   | -- | -- |
@@ -136,12 +133,12 @@ interconexión de entidades, relaciones y sus atributos respectivamente
 
   ||| Ejemplo |
   | -- | -- | -- |
-  | **Obligatorios u opcionales** | Define si un atributo debe o no tomar un valor. (Valores Nulos) - **Cardinalidad Mínima** | |
-  | **Simples**                   | Atributos que no son divisibles | código de curso, nombre |
-  | **Compuestos**                | Atributos formados por varios atributos simples | domicilio con ciudad, calle y número, CP |
-  | **Univaluados o monovalentes**   | Pueden tomar solo un valor de su dominio | fecha_nac (1,1) o prepaga (0,1) |
-  | **Multivaluados o polivalentes** | Toman más de un valor del dominio de datos | teléfonos (1, N), titulos (0, N) |
-  | ***Derivados o calculados**      | Pueden ser calculados a partir de otros atributos | edad = fecha_actual - fecha_nac |
+  | **Obligatorios u opcionales** | si un atributo debe o no tomar un valor (Valores Nulos) - **Cardinalidad Mínima** | |
+  | **Simples**                   | atributos que no son divisibles | código de curso, nombre |
+  | **Compuestos**                | atributos formados por varios atributos simples | domicilio con ciudad, calle y número, CP |
+  | **Univaluados o monovalentes**   | pueden tomar solo un valor de su dominio | fecha_nac (1,1) o prepaga (0,1) |
+  | **Multivaluados o polivalentes** | toman más de un valor del dominio de datos | teléfonos (1, N), titulos (0, N) |
+  | ***Derivados o calculados**      | pueden ser calculados a partir de otros atributos | edad = fecha_actual - fecha_nac |
 
 * **Cardinalidad de atributos**: cuántos valores del dominio puede tomar un atributo. Se denota como par ordenado (card min, card max)
 
@@ -155,7 +152,7 @@ interconexión de entidades, relaciones y sus atributos respectivamente
 
   ![Atributos](img/atributos.png)
 
-* **Valores nulos**: Algunos atributos pueden no tener un valor específico para una entidad, estos atributos tendrán **valores nulos**. ¿Qué significa aceptar un valor nulo?
+* **Valores nulos**: algunos atributos pueden no tener un valor específico para una entidad. ¿Qué significa aceptar un valor nulo?
 
   ||| Ejemplo: Piso = NULL |
   | -- | -- | -- |
@@ -175,9 +172,9 @@ interconexión de entidades, relaciones y sus atributos respectivamente
 * Son vínculos entre una o varias entidades
 * Pueden tener atributos
 * **No** pueden tener atributos identificadores en el modelo conceptual
-* En los documentos de requisitos la aparición de **verbos** podrá indicarnos, la existencia de una relación en el MER
+* En los documentos de requisitos la aparición de **verbos** podrá indicar la existencia de una relación en el MER
 
-* **Notación**: se denotan con un rombo. Nombre de la relación verbo o vervo seguido de una preposición.
+* **Notación**: **rombo**. Nombre de la relación verbo o verbo seguido de una preposición
 
   ![Relación](img/relacion.png)
 
@@ -204,49 +201,47 @@ interconexión de entidades, relaciones y sus atributos respectivamente
 
   ||||
   | -- | -- | -- |
-  | **Grado**        | Indica la cantidad de entidades involucradas en una relación | unarias o recursivas, binarias, ternarias, n-arias |
-  | **Cardinalidad** | Número mínimo y máximo de ejemplares de una entidad que puede vincularse con un ejemplar de la otra entidad. Es un tipo de restricción que se utiliza para comprobar y mantener la calidad de los datos | |
-  | **Conectividad** | Tipos de relación de acuerdo a su cardinalidad máxima | 1:1, 1:N, N:N ó N:M |
-  | **Participación** | Importancia de la cardinalidad mínima | **total** (participación obligatoria) o **parcial** (participación no obligatoria) |
+  | **Grado**         | cantidad de entidades involucradas en una relación | unarias o recursivas, binarias, ternarias, n-arias |
+  | **Cardinalidad**  | número mínimo y máximo de ejemplares de una entidad que puede vincularse con un ejemplar de la otra entidad. Es un tipo de restricción que se utiliza para comprobar y mantener la calidad de los datos | |
+  | **Conectividad**  | tipos de relación de acuerdo a su cardinalidad máxima | 1:1, 1:N, N:N ó N:M |
+  | **Participación** | importancia de la cardinalidad mínima | **total** (participación obligatoria) o **parcial** (participación no obligatoria) |
 
-* **Notación cardinalidad**: par ordenado para cada entidad que participa en la relación (card min, card max). Representamos la cardinalidad de la entidad en la relación, ubicándola al lado de ella.
+* **Notación cardinalidad**: par ordenado para cada entidad que participa en la relación (card min, card max). Representamos la cardinalidad de la entidad en la relación, ubicándola al lado de ella
   * Ejemplo: un empleado trabaja en un único departamento de forma obligatoria. En el departamento trabajan muchos empleados. Como mínimo debe trabajar un empleado en el mismo
 
     ![Cardinalidad](img/cardinalidad.png)
 
-* **Conectividad N:N**: Los empleados son asignados a proyectos, en una fecha en cada proyecto en particular
+* **Conectividad N:N**: los empleados son asignados a proyectos, en una fecha en cada proyecto en particular
 
     ![Conectividad N:N](img/n-n.png)
 
-* **Conectividad 1:N**: Cada empleado trabaja en un único departamento de forma obligatoria
+* **Conectividad 1:N**: cada empleado trabaja en un único departamento de forma obligatoria
 
     ![Conectividad 1:N](img/1-n.png)
 
-* **Conectividad 1:N**: Los empleados pueden o no afiliarse a un sindicato
+* **Conectividad 1:N**: los empleados pueden o no afiliarse a un sindicato
 
     ![Conectividad 1:N](img/1-n-bis.png)
 
-* **Conectividad 1:1**: Los empleados deben tener licencia de conducir
+* **Conectividad 1:1**: los empleados deben tener licencia de conducir
 
     ![Conectividad 1:1](img/1-1.png)
 
-* **Conectividad 1:1**: Los empleados pueden tener licencia de conducir
+* **Conectividad 1:1**: los empleados pueden tener licencia de conducir
 
     ![Conectividad 1:1](img/1-1-bis.png)
 
-* **Conectividad 1:1**: Los empleados pueden tener asignada una computadora. Las computadoras pueden no estar asignadas a nadie
+* **Conectividad 1:1**: los empleados pueden tener asignada una computadora. Las computadoras pueden no estar asignadas a nadie
 
     ![Conectividad 1:1](img/1-1-tri.png)
 
 * **Relaciones unarias o recursivas**: es una relación de una entidad consigo misma
 
-* **Ejemplos relaciones unarias**: Hay empleados que son jefes de otros empleados. Los empleados tienen una pareja de trabajo en equipo
+* **Ejemplos relaciones unarias**: hay empleados que son jefes de otros empleados. Los empleados tienen una pareja de trabajo en equipo
 
     ![Relaciones unarias](img/unarias.png)
 
 ## MER extendido
-
-* Extensiones al MER básico propuesto por Peter Chen
 
 ### Entidades fuertes y débiles
 
@@ -260,8 +255,6 @@ B entonces:
 
 ### Jerarquías y subconjuntos (concepto de herencia)
 
-* Jerarquías introducen el concepto de "herencia" en el MER
-
 * **Por Especialización**: es una representación que permite crear una entidad con atributos comunes a varias entidades y luego **subentidades** que especializan el concepto de la **superentidad**
 
   ![Especialización](img/especializacion.png)
@@ -274,8 +267,8 @@ B entonces:
 
   |||
   | -- | -- |
-  | **Total**       | cuando cada ejemplar de la superentidad está contenido obligatoriamente en alguna de las subtentidades     |
-  | **Parcial**     | cuando pueden exisir ejemplares de la superentidad que no estén contenidos en ninguna de las subentidades  |
+  | **Total**       | cuando cada ejemplar de la superentidad está contenido obligatoriamente en alguna de las subentidades |
+  | **Parcial**     | cuando pueden existir ejemplares de la superentidad que no estén contenidos en ninguna de las subentidades |
   | **Exclusiva**   | si un ejemplar de la superentidad está relacionado con una sola subentidad |
   | **Superpuesta** | si un ejemplar de la superentidad está relacionado con más de una subentidad |
 
@@ -283,13 +276,13 @@ B entonces:
 
   ![Jerarquías](img/jerarquia.png)
 
-* **Subconjunto**: representan un caso especial de la jerarquía. Hay situaciones en donde sólo se desprende una sola subentidad.No es necesario colocar la cobertura, ya que ésta nunca será total, si no sería una copia exacta de la superentidad. Además, no puede ser superpuesta, ya que no hay otra subentidad con la que superponerse. Por lo tanto, un subconjunto siempre es Parcial y Exclusivo, y, por ende, no se anota la cobertura
+* **Subconjunto**: representan un caso especial de la jerarquía. Hay situaciones en donde sólo se desprende una sola subentidad. No es necesario colocar la cobertura, ya que ésta nunca será total, si no sería una copia exacta de la superentidad. Además, no puede ser superpuesta, ya que no hay otra subentidad con la que superponerse. Por lo tanto, un subconjunto siempre es Parcial y Exclusivo, y, por ende, no se anota la cobertura
 
   ![Subconjunto](img/subconjunto.png)
 
 ### Restricciones
 
-* **De Exclusividad**: Dos o más relaciones tienen una restricción de exclusividad con respecto a una entidad que participa en ambas relaciones, si cada ejemplar de la entidad sólo puede participar en una y sólo una de las relaciones, es decir, no puede participar en ambas a la vez. Ejemplo: un libro es editado por un editorial o por la universidad, nunca por ambos
+* **De Exclusividad**: dos o más relaciones tienen una restricción de exclusividad con respecto a una entidad que participa en ambas relaciones, si cada ejemplar de la entidad sólo puede participar en una y sólo una de las relaciones, es decir, no puede participar en ambas a la vez. Ejemplo: un libro es editado por un editorial o por la universidad, nunca por ambos
 
   ![Restricción de Exclusividad](img/exclusividad.png)
 
@@ -314,7 +307,7 @@ B entonces:
 
   ![Sin historia](img/sin-historia.png)
 
-* **Introduciendo la HISTORIA**: sr refleja el paso del tiempo - relación N:N
+* **Introduciendo la HISTORIA**: se refleja el paso del tiempo - relación N:N
 
   ![Con historia](img/con-historia.png)
 
@@ -329,6 +322,7 @@ B entonces:
 * Por esta razón, algunos autores no las definen ni las usan y buscan modelar lo mismo con relaciones binarias
 * Solo las usaremos cuando las tres entidades participen con card. Máx = N
 * Ejemplo: UdD trata de una organización que asigna proyectos a sus empleados de sus distintos departamentos. Reglas de negocio:
+
 * En la organización hay departamentos, cada empleado pertenece a un departamento de forma única
 
   ![Ternaria](img/ternaria-1.png)
@@ -351,7 +345,6 @@ B entonces:
 
 ### Agregaciones
 
-* Concepto muy variante de acuerdo a la bibliografía utilizada
 * Cuando se genera una relación ternaria, tres entidades confluyen en ella. En ciertos casos esta representación pierde claridad o expresividad. (algunos autores las consideran incorrectas)
 * La agregación permite visualizar a un par de entidades y una relación como una gran entidad que a su vez se relaciona con otra
 * Ejemplo: El **empleado** participa en muchos **proyectos**, pero en cada proyecto, el empleado realiza una **tarea** particular. Pero una tarea en un proyecto, puede ser realizada por más de un empleado
