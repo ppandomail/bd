@@ -245,8 +245,7 @@
 
 ### Entidades fuertes y débiles
 
-* Dadas dos entidades A y B, se dice que la entidad A tiene **dependencia de existencia** de
-B entonces:
+* Dadas dos entidades A y B, se dice que la entidad A tiene **dependencia de existencia** de B entonces:
   * Un ejemplar de A depende de la existencia de un ejemplar de B
   * Si un ejemplar de B se borra, se han de borrar los ejemplares dependientes de ella en A
 * Siempre la cardinalidad de la entidad débil es (1,1)
