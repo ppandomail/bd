@@ -245,7 +245,7 @@
 
 ### Entidades fuertes y débiles
 
-* Dadas dos entidades A y B, se dice que la entidad A tiene **dependencia de existencia** de B entonces:
+* Dadas dos entidades A y B, se dice que A tiene **dependencia de existencia** de B entonces:
   * Un ejemplar de A depende de la existencia de un ejemplar de B
   * Si un ejemplar de B se borra, se han de borrar los ejemplares dependientes de ella en A
 * Siempre la cardinalidad de la entidad débil es (1,1)
@@ -254,7 +254,7 @@
 
 ### Jerarquías y subconjuntos (concepto de herencia)
 
-* **Por Especialización**: es una representación que permite crear una entidad con atributos comunes a varias entidades y luego **subentidades** que especializan el concepto de la **superentidad**
+* **Por Especialización**: permite crear una entidad con atributos comunes a varias entidades y luego **subentidades** que especializan el concepto de la **superentidad**
 
   ![Especialización](img/especializacion.png)
 
@@ -275,7 +275,7 @@
 
   ![Jerarquías](img/jerarquia.png)
 
-* **Subconjunto**: representan un caso especial de la jerarquía. Hay situaciones en donde sólo se desprende una sola subentidad. No es necesario colocar la cobertura, ya que ésta nunca será total, si no sería una copia exacta de la superentidad. Además, no puede ser superpuesta, ya que no hay otra subentidad con la que superponerse. Por lo tanto, un subconjunto siempre es Parcial y Exclusivo, y, por ende, no se anota la cobertura
+* **Subconjunto**: caso especial de la jerarquía. Hay situaciones en donde sólo se desprende una sola subentidad. No es necesario colocar la cobertura, ya que ésta nunca será total, si no sería una copia exacta de la superentidad. Además, no puede ser superpuesta, ya que no hay otra subentidad con la que superponerse. Por lo tanto, un subconjunto siempre es Parcial y Exclusivo, y, por ende, no se anota la cobertura
 
   ![Subconjunto](img/subconjunto.png)
 
