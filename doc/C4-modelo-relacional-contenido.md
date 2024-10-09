@@ -39,7 +39,7 @@
 
 |||
 | -- | -- |
-| **Atributo (Columna o Campo)** | característica del dato. Columna = (nombre, vaalor) |
+| **Atributo (Columna o Campo)** | característica del dato. Columna = (nombre, valor) |
 | **Dominio**                    | conjunto de valores atómicos posibles para un campo. (Tipo de datos) |
 | **Tupla (Registro o Fila)**    | conjunto ordenado de valores que describe las características del dato en un momento dado |
 | **Relación / Tabla**           ||
@@ -49,7 +49,7 @@
 ## Relaciones
 
 * Una **relación** sobre un dominio D1, D2, ..., Dn (Di no necesariamente distintos) consiste en un encabezado y un cuerpo
-  * **Encabezado**: conjunto fijo de atributos A1, A2, ..., An tal que cada atributo Ai corresponde exactamente a un dominio Di.
+  * **Encabezado**: conjunto fijo de atributos A1, A2, ..., An tal que cada atributo Ai corresponde exactamente a un dominio Di
   * **Cuerpo**: conjunto variable de tuplas, donde cada tupla consiste de un conjunto de pares (atributo,valor), (Ai, Vi) i = 1, ..., n. Hay un par para cada atributo del encabezado. Vi es un valor en el dominio Di
 
 * **Grado**: número de atributos de la relación
@@ -96,8 +96,7 @@
 
 ### Clave Foránea (FK)
 
-* Es un campo (o combinación de campos) en una relación (tabla) R2 cuyo valor debe "matchear" (coincidir) con la
-PK de una relación (tabla) R1 (R1 y R2 no necesariamente distintas)
+* Es un campo (o combinación de campos) en una relación (tabla) R2 cuyo valor debe "matchear" (coincidir) con la PK de una relación (tabla) R1 (R1 y R2 no necesariamente distintas)
 
   ![FK](img/fk.png)
 
@@ -107,7 +106,7 @@ PK de una relación (tabla) R1 (R1 y R2 no necesariamente distintas)
 
 ### Restricción de Integridad de Tablas
 
-* Un campo que participa como la PK de una tabla, **no acepta valores nulos (NULL)**
+* Un campo que participa como PK de una tabla, **no acepta valores nulos (NULL)**
 * Un NULL representa una "propiedad inaplicable" o un "valor desconocido". Las filas (registros) son identificables en el MR, por lo que su PK no puede ser nula
 
 ### Restricción de Integridad Referencial
