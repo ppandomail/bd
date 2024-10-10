@@ -124,3 +124,7 @@ liquidación de sueldo. Ya que son accedidos por subsistemas diferentes
 * **Fusión de entidades**: Ejemplo: Se fusionan las entidades personas y los departamentos de los que son dueños. **Efecto colateral**: se obtienen atributos que permiten valores NULOS (NULL). Generalmente se hace sobre relaciones 1:1, rara vez sobre 1: N y prácticamente: nunca sobre N:N
 
   ![Fusión de entidades](img/fase1-fusion-entidades.png)
+
+## Infografía resumen
+
+![Infografía resumen](img/modelo-logico.jpg)
