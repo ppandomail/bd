@@ -59,10 +59,10 @@
 | 02 | 21/08 | U2 Modelo Conceptual: Entidades y Atributos. **A1** | |
 | 03 | 28/08 | U2 Modelo Conceptual: Relaciones. **A2** | ***V2: Herramientas*** y ***V3: Empresa de Transporte*** |
 | 04 | 04/09 | Consulta de los casos de estudio |  |
-| 05 | 11/09 | E1: Exposiciones del avance de los casos de estudio (DER) | ***TPO1 entrega: 13/09*** |
+| 05 | 11/09 | E1: Exposiciones del avance de los casos de estudio (DER) | ***TPO1*** |
 | 06 | 18/09 | U2 Modelo Conceptual: MER ext (jerarquias, relaciones recursivas, debil, ternarias, agregaciones e historial). **A3** | ***V4: Médicos sin Frontera (DER)*** |
 | 07 | 25/09 | E2: Exposiciones del avance de los casos de estudio (MER ext) | |
-| 08 | 02/10 | U3 Modelo Lógico Fase I. **A4**  | ***TPO2 entrega: 4/10*** |
+| 08 | 02/10 | U3 Modelo Lógico Fase I. **A4**  | ***TPO2*** |
 | 09 | 09/10 | U4 MR. **A4** | ***V5: Médicos sin Frontera (ML FI: Reestructuración)*** |
 | 10 | 16/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **A5** | |
 | 11 | 23/10 | E3: Exposiciones del avance de los casos de estudio (ML y MR) | |
