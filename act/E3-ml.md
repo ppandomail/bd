@@ -1,4 +1,4 @@
-# Exposición Grupal 3: ML: Reestructuración del DER y Transformación al Esquema Relacional 
+# Exposición Grupal 3: ML: Reestructuración del DER y Transformación al Esquema Relacional
 
 * Cada equipo deberá dar una breve explicación sobre su caso de estudio:
   * Resolución de atributos compuestos

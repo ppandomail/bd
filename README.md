@@ -62,15 +62,15 @@
 | 05 | 11/09 | E1: Exposiciones del avance de los casos de estudio (DER) | ***TPO1*** |
 | 06 | 18/09 | U2 Modelo Conceptual: MER ext (jerarquias, relaciones recursivas, debil, ternarias, agregaciones e historial). **A3** | ***V4: Médicos sin Frontera (DER)*** |
 | 07 | 25/09 | E2: Exposiciones del avance de los casos de estudio (MER ext) | |
-| 08 | 02/10 | U3 Modelo Lógico Fase I. **A4**  | ***TPO2*** |
+| 08 | 05/10 | U3 Modelo Lógico Fase I. **A4**  | ***TPO2*** |
 | 09 | 09/10 | U4 MR. **A4** | ***V5: Médicos sin Frontera (ML FI: Reestructuración)*** |
-| 10 | 16/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **A5** | |
-| 11 | 23/10 | E3: Exposiciones del avance de los casos de estudio (ML y MR) | |
-| 12 | 30/10 | MR y Físico en MySQL WorkBench **A5** |  ***Lectura U6 Normalización y resolución del cuestionario*** |
-| 13 | 06/11 | U7 SQL | ***TPO3*** |
-| 14 | 13/11 | U7 SQL y Consultas para TFI | ***TFI*** |
-| 15 | 20/11 | U7 SQL y Consultas para TFI | ***TFI Recuperatorio*** |
-| 16 | 17/11 | U7 SQL | Cierre de Notas |
+| 10 | 19/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **A5** | |
+| 11 | 26/10 | E3: Exposiciones del avance de los casos de estudio (ML y MR) | |
+| 12 | 02/11 | MR y Físico en MySQL WorkBench **A5** |  ***Lectura U6 Normalización y resolución del cuestionario*** |
+| 13 | 09/11 | U7 SQL | ***TPO3*** |
+| 14 | 16/11 | U7 SQL y Consultas para TFI | ***TFI*** |
+| 15 | 23/11 | U7 SQL y Consultas para TFI | ***TFI Recuperatorio*** |
+| 16 | 30/11 | U7 SQL | Cierre de Notas |
 
 ## Criterios de evaluación
 
@@ -84,4 +84,5 @@
   * Final, de contenido teórico-práctico
 
 * **Promoción**
-  * Se debe tener una nota promedio de 7 o superior entre los TPOs y el TFI, en cualquiera de sus instancias. Quienes no obtenga ese promedio deberán rendir examen final
+  * Se debe tener una nota promedio de 7 o superior entre los TPOs y el TFI, en cualquiera de sus instancias
+  * Quienes no obtenga ese promedio deberán rendir examen final
