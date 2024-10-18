@@ -74,7 +74,7 @@ ALTER TABLE empresas (
   Alter column direccion VARCHAR(50) NULL);
 ```
 
-## Lenguaje de Manipulación de datos
+## Lenguaje de Manipulación de datos (DML)
 
 ### Estructura básica
 
@@ -182,3 +182,363 @@ FROM materias
 | Contabilidad | 1 |
 | Empresas     | 2 |
 | Comercio     | 2 |
+
+### Ejemplo 6: mostrar todos los códigos de materias que estén en la tabla Inscripciones que tengan al menos a un alumno aprobado
+
+```sql
+SELECT idmateria
+FROM inscripciones
+WHERE resultado > 3
+```
+
+| Idmateria |
+| -- |
+| 1 |
+| 2 |
+| 3 |
+| 3 |
+| 4 |
+| 7 |
+| 9 |
+| 8 |
+| 10 |
+| 4 |
+| 10 |
+| 11 |
+| 12 |
+| 1 |
+| 2 |
+
+Para eliminar tuplas repetidas se debe utilizar la cláusula DISTINCT
+
+```sql
+SELECT DISTINCT idmateria
+FROM inscripciones
+WHERE resultado > 3
+```
+
+### Ejemplo 7: presentar todas las carreras que tiene entre 4 y 6 años de duración
+
+```sql
+SELECT nombre
+FROM carreras
+WHERE duracion_años >= 4 AND duracion_años <= 6
+```
+
+Es posible realizar la misma consulta utilizando el operador BETWEEN
+
+```sql
+SELECT nombre
+FROM carreras
+WHERE duracion_años BETWEEN 4 AND 6
+```
+
+Los atributos utilizados en el SELECT de una consulta SQL pueden tener asociados operaciones válidas para sus dominios. Así, por ejemplo sería válida una consulta que devuelva el salario de un empleado menos un 10% de retención
+
+```sql
+SELECT nombre_empleado, salario * 0.9
+FROM empleados
+WHERE ocupacion = "Gerente"
+```
+
+### Ejemplo 8: presentar el nombre de todos los alumnos y la carrera que cursa
+
+```sql
+SELECT alu.nombre, carr.nombre
+FROM alumnos alu, carreras carr
+WHERE alu.idcarrera = carr.idcarrera
+```
+
+| alu.nombre | carr.nombre |
+| -- | -- |
+| García     | Informática |
+| Perez      | Informática |
+| Gomez      | Química     |
+| Pizarro    | Química     |
+| Castelli   | Informática |
+| Pettorutti | Química     |
+| Montezanti | Contador    |
+| Suarez     | Informática |
+
+### Ejemplo 9: presentar el nombre de todos los alumnos, la carrera que cursa y de que localidad proviene
+
+```sql
+SELECT a.nombre AS nombrealumno, c.nombre AS nombrecarrera, l.nombre AS nombrelocalidad
+FROM alumnos a, carreras c, localidades l
+WHERE a.idcarrera = c.idcarrera 
+AND a.idlocalidad = l.idlocalidad
+```
+
+| nombrealumno | nombrecarrera | nombrelocalidad |
+| -- | -- | -- |
+| García     | Informática | General Pico |
+| Perez      | Informática | La Plata     |
+| Gomez      | Química     | General Pico |
+| Pizarro    | Química     | General Pico |
+| Castelli   | Informática | La Plata     |
+| Pettorutti | Química     | Tres Arroyos |
+| Montezanti | Contador    | La Plata     |
+| Suarez     | Informática | Tres Arroyos |
+
+### Ejemplo 10: presentar todas las materias aprobadas del alumno Pizarro, o rendidas durante el 2008
+
+```sql
+(SELECT m.nombre
+FROM alumnos a, materias m, inscripciones i
+WHERE a.nombre = "Pizarro"
+AND a.idmateria = i.idmateria
+AND i.idalumno = a.idalumno
+AND i.resultado > 3)
+UNION
+(SELECT m.nombre
+FROM alumnos a, materias m, inscripciones i
+WHERE a.nombre = "Pizarro"
+AND a.idmateria = i.idmateria
+AND i.idalumno = a.idalumno
+AND i.año = 2008)
+```
+
+Para la diferencia de conjuntos es EXCEPT
+Para la intersección de conjuntos es INTERSECT
+
+### Ejemplo 11: presentar todas las materias que contengan el substring "ga" dentro de su nombre
+
+```sql
+SELECT nombre
+FROM materias
+WHERE nombre LIKE "%ga%"
+```
+
+| nombre |
+| -- |
+| Organica   |
+| Inorganica |
+
+### Ejemplo 12: presentar el nombre de los alumnos que tengan DNI que comiencen con 23 millones
+
+```sql
+SELECT nombre
+FROM alumnos
+WHERE nombre LIKE "23 _ _ _ _ _ _"
+```
+
+### Ejemplo 13: presentar los nombres de todas las materias y el año de curso, para la carrera informática, ordenados por año de curso
+
+```sql
+SELECT m.nombre, m.año_curso
+FROM materias m, carreras c
+WHERE c.nombre = "Informática"
+AND m.idcarrera = c.idcarrera
+ORDER BY m.año_curso 
+```
+
+| m.nombre | m.año_curso |
+| -- | -- |
+| Programación | 1 |
+| Matermática  | 1 |
+| IBD          | 2 |
+| IS           | 2 |
+| Conceptos    | 3 |
+| Concurrente  | 3 |
+
+Por defecto la cláusula ORDER BY ordena las tuplas de menor a mayor
+
+### Ejemplo 14: presentar los nombres de todas las materias y el año de curso, para la carrera informática, ordenados por año de curso de mayor a menor
+
+```sql
+SELECT m.nombre, m.año_curso
+FROM materias m, carreras c
+WHERE c.nombre = "Informática"
+AND m.idcarrera = c.idcarrera
+ORDER BY m.año_curso DESC
+```
+
+| m.nombre | m.año_curso |
+| -- | -- |
+| Conceptos    | 3 |
+| Concurrente  | 3 |
+| IBD          | 2 |
+| IS           | 2 |
+| Programación | 1 |
+| Matermática  | 1 |
+
+### Ejemplo 15: presentar los nombres de todas las materias y el año de curso, para la carrera informática, ordenados por año de curso y nombre de la materia
+
+```sql
+SELECT m.nombre, m.año_curso
+FROM materias m, carreras c
+WHERE c.nombre = "Informática"
+AND m.idcarrera = c.idcarrera
+ORDER BY m.año_curso, m.nombre
+```
+
+| m.nombre | m.año_curso |
+| -- | -- |
+| Matermática  | 1 |
+| Programación | 1 |
+| IBD          | 2 |
+| IS           | 2 |
+| Conceptos    | 3 |
+| Concurrente  | 3 |
+
+### Ejemplo 16: retornar el nombre del alumno que aparece primero en una lista alfabética
+
+```sql
+SELECT MIN(nombre)
+FROM alumnos
+```
+
+### Ejemplo 17: retornar la máxima nota de alguna materia durante 2008
+
+```sql
+SELECT MAX(resultado)
+FROM inscripciones
+WHERE año = 2008
+```
+
+### Ejemplo 18: informar cuantos alumnos aprobaron el final de programación
+
+```sql
+SELECT COUNT(*)
+FROM materias m, inscripciones i
+WHERE i.idmateria = m.idmateria
+AND m.nombre = "Programación"
+AND i.resultado > 3
+```
+
+### Ejemplo 19: informar cuantos alumnos aprobaron al menos un final durante 2008
+
+```sql
+SELECT COUNT(DISTINCT idalumno)
+FROM inscripciones
+WHERE resultado > 3
+AND año = 2008
+```
+
+### Ejemplo 20: informar la nota promedio (con y sin aplazos) del alumno Montezanti
+
+```sql
+SELECT AVG(resultado)
+FROM inscripciones i, alumnos a
+WHERE a.nombre = "Montesanti"
+AND i.idalumno = a.idalumno
+```
+
+### Ejemplo 21: retornar la carrera de mayor duración
+
+```sql
+SELECT nombre
+FROM carreras
+WHERE duración_años = (SELECT MAX(duración_años)
+                       FROM carreras)
+```
+
+### Ejemplo 22: presentar para cada carrera la cantidad de materias que la componen, solo mostrar en el resultado aquellas carreras con más de 20 materias
+
+```sql
+SELECT c.nombre, COUNT(*)
+FROM carreras c, materias m
+WHERE c.idcarrera = m.idmateria
+GROUP BY c.nombre
+HAVING COUNT(*) > 20
+```
+
+### Ejemplo 23: presentar para cada alumno el total de veces que rindió, siempre que el promedio de sus notas supere siete
+
+```sql
+SELECT a.nombre, COUNT(i.idmateria)
+FROM alumnos a, inscripciones i
+WHERE a.idalumno = i.idalumno
+GROUP BY a.nombre
+HAVING AVG(i.resultado) > 7
+```
+
+### Ejemplo 24: informar el nombre de los alumnos que están inscriptos en carreras de 5 años de duración
+
+```sql
+SELECT nombre
+FROM alumnos
+WHERE idcarrera IN (SELECT idcarrera
+                    FROM carreras
+                    WHERE duración_años = 5)
+
+```
+
+### Ejemplo 25: mostrar las materias que no hayan sido aprobadas por ningún alumno
+
+```sql
+SELECT nombre
+FROM materias
+WHERE idmateria NOT IN (SELECT idmaterias
+                        FROM inscripciones
+                        WHERE resultado > 3)
+```
+
+### Ejemplo 26: mostrar el nombre de los alumnos que hayan aprobado algún final durante 2007
+
+```sql
+SELECT nombre
+FROM alumnos
+WHERE EXIST (SELECT *
+             FROM inscripciones
+             WHERE alumnos.idalumno = inscripciones.idalumno
+             AND resultado > 3)
+```
+
+### Ejemplo 27: mostrar aquellos alumnos que no se inscribieron en ma- teria alguna
+
+```sql
+SELECT a.nombre
+FROM alumnos a
+WHERE NOT EXIST (SELECT *
+                 FROM inscripciones i
+                 WHERE a.idalumno = i.idalumno)
+```
+
+### Ejemplo 30: mostrar aquellos alumnos que hayan inscripto en todas las materias de la carrera
+
+```sql
+SELECT a.nombre
+FROM alumnos a
+WHERE NOT EXIST (SELECT *
+                 FROM materia m
+                 WHERE m.idcarrera = a.idcarrera 
+                 AND NOT EXIST(SELECT *
+                               FROM inscripciones i
+                               WHERE i.idmateria = m.idmateria
+                               AND i.idalumno=a.idalumno))
+```
+
+### Ejemplo 31: presentar todos los alumnos que no tengan defina una localidad de procedencia
+
+```sql
+SELECT nombre
+FROM alumnos
+WHERE idlocalidad IS NULL
+```
+
+## Lenguaje de Definición de Datos (DDL)
+
+### Insertar tuplas a la BD
+
+```sql
+INSERT INTO alumnos (nombre, dni, idlocalidad, idcarrera)
+VALUES ('Julio Cesar', '12344321', 3, 1);
+```
+
+### Borrar tuplas de la BD
+
+```sql
+DELETE FROM alumnos
+WHERE idlocalidad = (SELECT idlocalidad
+                     FROM localidades
+                     WHERE nombre = 'La Plata')
+```
+
+### Modificar tuplas de la BD
+
+```sql
+UPDATE carreras
+SET duración_años = 5
+WHERE nombre = "Contador"
+```
