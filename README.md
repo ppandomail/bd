@@ -26,6 +26,7 @@
 | 05 | [Modelo Lógico Fase II](doc/C5-modelo-logico-2-contenido.md) |
 | 06 | [Normalización](doc/C6-normalizacion-contenido.md)           |
 | 07 | [Modelo Físico - SQL](doc/C7-modelo-fisico-sql-contenido.md) |
+| 07 | [Modelo Físico - MySQL](doc/C8-modelo-fisico-mysql-contenido.md) |
 
 ## Bibliografía
 
@@ -42,6 +43,8 @@
 | [Base de datos (Pulido Romero, E.; Escobar Domínguez, Ó; & Núñez Pérez, J. Á.)](https://elibro.net/es/lc/unsada/titulos/121283) |
 | [Fundamentos de bases de datos (Silberschatz, A.)](biblio/fundamentos-de-bases-de-datos-silberschatz-korth-sudarshan.pdf) |
 | [Bases de Datos (Marqués, M.)](biblio/bases-de-datos-mercedes-marquez.pdf) |
+| [Tutorial MySQL Workbench (Ado, M.)](biblio/tutorial-mysql-workbench-ado.pdf) |
+| [Lenguaje SQL (Ado, M.)](biblio/sql-ado.pdf) |
 
 ## Herramientas
 

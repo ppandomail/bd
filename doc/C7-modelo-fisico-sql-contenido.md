@@ -6,22 +6,32 @@
 * Desarrollado inicialmente en laboratorios de investigación de IBM
 * Estándar desde 1986
 * Es **declarativo**: se indica **qué datos** se requieren, sin especificar cómo
+* Hay **independencia física** de los datos
 
   |||||
   | -- | -- | -- | -- |
-  | **DDL** | **Lenguaje de Definición de Datos** | permite crear y modificar el esquema de la base, tablas, restricciones, vistas, etc. | CREATE, DROP, ALTER |
-  | **DML** | **Lenguaje de Manejo de Datos**     | permite consultar (selección) y actualizar datos (inserción, modificación, eliminación) | SELECT, INSERT, DELETE, UPDATE |
+  | **DDL** | **Lenguaje de Definición de Datos** | permite crear y modificar el esquema de la base, tablas, restricciones, vistas, etc. | CREATE, ALTER, DROP |
+  | **DML** | **Lenguaje de Manejo de Datos**     | permite actualizar datos (inserción, modificación, eliminación) | INSERT, UPDATE, DELETE |
+  | **DQL** | **Lenguaje de Consulta de Datos**   | permite consultar (seleccionar) datos | SELECT |
   | **DCL** | **Lenguaje de Control de Datos**    | permite gestionar el acceso a los datos | GRANT, REVOKE |
   | **TCL** | **Lenguaje de Control de Transacciones** | permite ejecutar varios comandos de forma simultánea como si fuera un comando atómico o indivisible | COMMIT, ROLLBACK |
 
-## Crear o borrar una BD
+## Buenas prácticas del SQL
+
+* Las sentencias de SQL se pueden escribir tanto en mayúsculas como en minúsculas y lo mismo sucede con los nombres de las tablas y de las columnas, o cualquier objeto
+* Una buena práctica es usar **mayúsculas** para las **palabras clave del lenguaje** y **minúsculas** para los **nombres de los objetos**, con notación **snake_case**
+* Las **sentencias** de SQL **terminan** siempre con el **carácter punto y coma** (;)
+
+## DDL
+
+### Crear o borrar una BD
 
 | Sentencia SQL ||
 | -- | -- |
 | ```CREATE DATABASE nombre_bd;``` | genera una BD cuyo nombre se indica |
 | ```DROP DATABASE nombre_bd;```   | elimina una BD completa (tablas y datos) |
 
-## Operar contra Tablas de BD
+### Operar contra Tablas de BD
 
 | Sentencia SQL ||
 | -- | -- |
@@ -74,14 +84,40 @@ ALTER TABLE empresas (
   Alter column direccion VARCHAR(50) NULL);
 ```
 
-## Lenguaje de Manipulación de datos (DML)
+## DML
+
+### Insertar tuplas a la BD
+
+```sql
+INSERT INTO alumnos (nombre, dni, idlocalidad, idcarrera)
+VALUES ('Julio Cesar', '12344321', 3, 1);
+```
+
+### Borrar tuplas de la BD
+
+```sql
+DELETE FROM alumnos
+WHERE idlocalidad = (SELECT idlocalidad
+                     FROM localidades
+                     WHERE nombre = 'La Plata');
+```
+
+### Modificar tuplas de la BD
+
+```sql
+UPDATE carreras
+SET duración_años = 5
+WHERE nombre = "Contador";
+```
+
+## DQL
 
 ### Estructura básica
 
 ```sql
-SELECT lista_de_atributos
+SELECT lista_de_columnas
 FROM lista_de_tablas
-WHERE predicado
+[WHERE predicado];
 ```
 
 ### Ejemplo modelos
@@ -105,7 +141,7 @@ WHERE predicado
 
 ```sql
 SELECT nombre
-FROM alumnos
+FROM alumnos;
 ```
 
 | nombre |
@@ -123,14 +159,14 @@ FROM alumnos
 
 ```sql
 SELECT idalumno, nombre, dni, idlocalidad, idcarrera 
-FROM alumnos
+FROM alumnos;
 ```
 
 o mediante operador *
 
 ```sql
 SELECT *
-FROM alumnos
+FROM alumnos;
 ```
 
 ### Ejemplo 3: presentar todos los alumnos que cursen la carrera cuyo código es 2
@@ -138,7 +174,7 @@ FROM alumnos
 ```sql
 SELECT nombre
 FROM alumnos
-WHERE idcarrera = 2
+WHERE idcarrera = 2;
 ```
 
 | nombre |
@@ -152,7 +188,7 @@ WHERE idcarrera = 2
 ```sql
 SELECT nombre
 FROM alumnos
-WHERE idcarrera = 2 AND idlocalidad = 1
+WHERE idcarrera = 2 AND idlocalidad = 1;
 ```
 
 | nombre |
@@ -164,7 +200,7 @@ WHERE idcarrera = 2 AND idlocalidad = 1
 
 ```sql
 SELECT nombre, año_curso
-FROM materias
+FROM materias;
 ```
 
 | nombre | año_curso |
@@ -188,7 +224,7 @@ FROM materias
 ```sql
 SELECT idmateria
 FROM inscripciones
-WHERE resultado > 3
+WHERE resultado > 3;
 ```
 
 | Idmateria |
@@ -214,7 +250,7 @@ Para eliminar tuplas repetidas se debe utilizar la cláusula DISTINCT
 ```sql
 SELECT DISTINCT idmateria
 FROM inscripciones
-WHERE resultado > 3
+WHERE resultado > 3;
 ```
 
 ### Ejemplo 7: presentar todas las carreras que tiene entre 4 y 6 años de duración
@@ -222,7 +258,7 @@ WHERE resultado > 3
 ```sql
 SELECT nombre
 FROM carreras
-WHERE duracion_años >= 4 AND duracion_años <= 6
+WHERE duracion_años >= 4 AND duracion_años <= 6;
 ```
 
 Es posible realizar la misma consulta utilizando el operador BETWEEN
@@ -230,7 +266,7 @@ Es posible realizar la misma consulta utilizando el operador BETWEEN
 ```sql
 SELECT nombre
 FROM carreras
-WHERE duracion_años BETWEEN 4 AND 6
+WHERE duracion_años BETWEEN 4 AND 6;
 ```
 
 Los atributos utilizados en el SELECT de una consulta SQL pueden tener asociados operaciones válidas para sus dominios. Así, por ejemplo sería válida una consulta que devuelva el salario de un empleado menos un 10% de retención
@@ -238,7 +274,7 @@ Los atributos utilizados en el SELECT de una consulta SQL pueden tener asociados
 ```sql
 SELECT nombre_empleado, salario * 0.9
 FROM empleados
-WHERE ocupacion = "Gerente"
+WHERE ocupacion = "Gerente";
 ```
 
 ### Ejemplo 8: presentar el nombre de todos los alumnos y la carrera que cursa
@@ -246,7 +282,7 @@ WHERE ocupacion = "Gerente"
 ```sql
 SELECT alu.nombre, carr.nombre
 FROM alumnos alu, carreras carr
-WHERE alu.idcarrera = carr.idcarrera
+WHERE alu.idcarrera = carr.idcarrera;
 ```
 
 | alu.nombre | carr.nombre |
@@ -266,7 +302,7 @@ WHERE alu.idcarrera = carr.idcarrera
 SELECT a.nombre AS nombrealumno, c.nombre AS nombrecarrera, l.nombre AS nombrelocalidad
 FROM alumnos a, carreras c, localidades l
 WHERE a.idcarrera = c.idcarrera 
-AND a.idlocalidad = l.idlocalidad
+AND a.idlocalidad = l.idlocalidad;
 ```
 
 | nombrealumno | nombrecarrera | nombrelocalidad |
@@ -295,7 +331,7 @@ FROM alumnos a, materias m, inscripciones i
 WHERE a.nombre = "Pizarro"
 AND a.idmateria = i.idmateria
 AND i.idalumno = a.idalumno
-AND i.año = 2008)
+AND i.año = 2008);
 ```
 
 Para la diferencia de conjuntos es EXCEPT
@@ -306,7 +342,7 @@ Para la intersección de conjuntos es INTERSECT
 ```sql
 SELECT nombre
 FROM materias
-WHERE nombre LIKE "%ga%"
+WHERE nombre LIKE "%ga%";
 ```
 
 | nombre |
@@ -319,7 +355,7 @@ WHERE nombre LIKE "%ga%"
 ```sql
 SELECT nombre
 FROM alumnos
-WHERE nombre LIKE "23 _ _ _ _ _ _"
+WHERE nombre LIKE "23 _ _ _ _ _ _";
 ```
 
 ### Ejemplo 13: presentar los nombres de todas las materias y el año de curso, para la carrera informática, ordenados por año de curso
@@ -329,7 +365,7 @@ SELECT m.nombre, m.año_curso
 FROM materias m, carreras c
 WHERE c.nombre = "Informática"
 AND m.idcarrera = c.idcarrera
-ORDER BY m.año_curso 
+ORDER BY m.año_curso;
 ```
 
 | m.nombre | m.año_curso |
@@ -350,7 +386,7 @@ SELECT m.nombre, m.año_curso
 FROM materias m, carreras c
 WHERE c.nombre = "Informática"
 AND m.idcarrera = c.idcarrera
-ORDER BY m.año_curso DESC
+ORDER BY m.año_curso DESC;
 ```
 
 | m.nombre | m.año_curso |
@@ -369,7 +405,7 @@ SELECT m.nombre, m.año_curso
 FROM materias m, carreras c
 WHERE c.nombre = "Informática"
 AND m.idcarrera = c.idcarrera
-ORDER BY m.año_curso, m.nombre
+ORDER BY m.año_curso, m.nombre;
 ```
 
 | m.nombre | m.año_curso |
@@ -385,7 +421,7 @@ ORDER BY m.año_curso, m.nombre
 
 ```sql
 SELECT MIN(nombre)
-FROM alumnos
+FROM alumnos;
 ```
 
 ### Ejemplo 17: retornar la máxima nota de alguna materia durante 2008
@@ -393,7 +429,7 @@ FROM alumnos
 ```sql
 SELECT MAX(resultado)
 FROM inscripciones
-WHERE año = 2008
+WHERE año = 2008;
 ```
 
 ### Ejemplo 18: informar cuantos alumnos aprobaron el final de programación
@@ -403,7 +439,7 @@ SELECT COUNT(*)
 FROM materias m, inscripciones i
 WHERE i.idmateria = m.idmateria
 AND m.nombre = "Programación"
-AND i.resultado > 3
+AND i.resultado > 3;
 ```
 
 ### Ejemplo 19: informar cuantos alumnos aprobaron al menos un final durante 2008
@@ -412,7 +448,7 @@ AND i.resultado > 3
 SELECT COUNT(DISTINCT idalumno)
 FROM inscripciones
 WHERE resultado > 3
-AND año = 2008
+AND año = 2008;
 ```
 
 ### Ejemplo 20: informar la nota promedio (con y sin aplazos) del alumno Montezanti
@@ -421,7 +457,7 @@ AND año = 2008
 SELECT AVG(resultado)
 FROM inscripciones i, alumnos a
 WHERE a.nombre = "Montesanti"
-AND i.idalumno = a.idalumno
+AND i.idalumno = a.idalumno;
 ```
 
 ### Ejemplo 21: retornar la carrera de mayor duración
@@ -430,7 +466,7 @@ AND i.idalumno = a.idalumno
 SELECT nombre
 FROM carreras
 WHERE duración_años = (SELECT MAX(duración_años)
-                       FROM carreras)
+                       FROM carreras);
 ```
 
 ### Ejemplo 22: presentar para cada carrera la cantidad de materias que la componen, solo mostrar en el resultado aquellas carreras con más de 20 materias
@@ -440,7 +476,7 @@ SELECT c.nombre, COUNT(*)
 FROM carreras c, materias m
 WHERE c.idcarrera = m.idmateria
 GROUP BY c.nombre
-HAVING COUNT(*) > 20
+HAVING COUNT(*) > 20;
 ```
 
 ### Ejemplo 23: presentar para cada alumno el total de veces que rindió, siempre que el promedio de sus notas supere siete
@@ -450,7 +486,7 @@ SELECT a.nombre, COUNT(i.idmateria)
 FROM alumnos a, inscripciones i
 WHERE a.idalumno = i.idalumno
 GROUP BY a.nombre
-HAVING AVG(i.resultado) > 7
+HAVING AVG(i.resultado) > 7;
 ```
 
 ### Ejemplo 24: informar el nombre de los alumnos que están inscriptos en carreras de 5 años de duración
@@ -460,7 +496,7 @@ SELECT nombre
 FROM alumnos
 WHERE idcarrera IN (SELECT idcarrera
                     FROM carreras
-                    WHERE duración_años = 5)
+                    WHERE duración_años = 5);
 
 ```
 
@@ -471,7 +507,7 @@ SELECT nombre
 FROM materias
 WHERE idmateria NOT IN (SELECT idmaterias
                         FROM inscripciones
-                        WHERE resultado > 3)
+                        WHERE resultado > 3);
 ```
 
 ### Ejemplo 26: mostrar el nombre de los alumnos que hayan aprobado algún final durante 2007
@@ -482,7 +518,7 @@ FROM alumnos
 WHERE EXIST (SELECT *
              FROM inscripciones
              WHERE alumnos.idalumno = inscripciones.idalumno
-             AND resultado > 3)
+             AND resultado > 3);
 ```
 
 ### Ejemplo 27: mostrar aquellos alumnos que no se inscribieron en ma- teria alguna
@@ -492,7 +528,7 @@ SELECT a.nombre
 FROM alumnos a
 WHERE NOT EXIST (SELECT *
                  FROM inscripciones i
-                 WHERE a.idalumno = i.idalumno)
+                 WHERE a.idalumno = i.idalumno);
 ```
 
 ### Ejemplo 30: mostrar aquellos alumnos que hayan inscripto en todas las materias de la carrera
@@ -506,7 +542,7 @@ WHERE NOT EXIST (SELECT *
                  AND NOT EXIST(SELECT *
                                FROM inscripciones i
                                WHERE i.idmateria = m.idmateria
-                               AND i.idalumno=a.idalumno))
+                               AND i.idalumno=a.idalumno));
 ```
 
 ### Ejemplo 31: presentar todos los alumnos que no tengan defina una localidad de procedencia
@@ -514,31 +550,5 @@ WHERE NOT EXIST (SELECT *
 ```sql
 SELECT nombre
 FROM alumnos
-WHERE idlocalidad IS NULL
-```
-
-## Lenguaje de Definición de Datos (DDL)
-
-### Insertar tuplas a la BD
-
-```sql
-INSERT INTO alumnos (nombre, dni, idlocalidad, idcarrera)
-VALUES ('Julio Cesar', '12344321', 3, 1);
-```
-
-### Borrar tuplas de la BD
-
-```sql
-DELETE FROM alumnos
-WHERE idlocalidad = (SELECT idlocalidad
-                     FROM localidades
-                     WHERE nombre = 'La Plata')
-```
-
-### Modificar tuplas de la BD
-
-```sql
-UPDATE carreras
-SET duración_años = 5
-WHERE nombre = "Contador"
+WHERE idlocalidad IS NULL;
 ```
