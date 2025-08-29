@@ -17,16 +17,15 @@
 
 ## Programa
 
-| Unidad | Contenido |
-| -- | -- |
-| 01 | [Modelado de Datos](doc/C1-modelado-datos-contenido.md)      |
-| 02 | [Modelo Conceptual](doc/C2-modelo-conceptual-contenido.md)   |
-| 03 | [Modelo Lógico Fase I](doc/C3-modelo-logico-1-contenido.md)  |
-| 04 | [Modelo Relacional](doc/C4-modelo-relacional-contenido.md)   |
-| 05 | [Modelo Lógico Fase II](doc/C5-modelo-logico-2-contenido.md) |
-| 06 | [Normalización](doc/C6-normalizacion-contenido.md)           |
-| 07 | [Modelo Físico - SQL](doc/C7-modelo-fisico-sql-contenido.md) |
-| 07 | [Modelo Físico - MySQL](doc/C8-modelo-fisico-mysql-contenido.md) |
+| Unidad | Contenido                                             |
+| --     | --                                                    |
+| 01     | [Modelado de Datos](doc/01-modelado-datos.ipynb)      |
+| 02     | [Modelo Conceptual](doc/02-modelo-conceptual.ipynb)   |
+| 03     | [Modelo Lógico Fase I](doc/03-modelo-logico-1.ipynb)  |
+| 04     | [Modelo Relacional](doc/04-modelo-relacional.ipynb)   |
+| 05     | [Modelo Lógico Fase II](doc/05-modelo-logico-2.ipynb) |
+| 06     | [Normalización](doc/06-normalizacion.ipynb)           |
+| 07     | [Modelo Físico - SQL](doc/07-modelo-fisico.ipynb)     |
 
 ## Bibliografía
 
@@ -53,27 +52,6 @@
 | **Caser 2.0**  | [https://sedici.unlp.edu.ar/handle/10915/47130](https://sedici.unlp.edu.ar/handle/10915/47130) - [Descarga](https://drive.google.com/file/d/1pe6Xz2ORhuI_f5fnetR-NJSZozUBo0Qj/view) | [Video descarga](https://youtu.be/ZRT2XUGF-aI?si=njwLOP1A0xeVEC-Q) - [Video interface](https://youtu.be/EQcP8tRxxGY?si=Bp4AImVjQNWmjvE6) |
 | **Draw.io**    | [https://app.diagrams.net/](https://app.diagrams.net/) | [Video](https://youtu.be/L_1mJ2OR_C8?si=NadO7hlMp1ldztjs) |
 | **LucidChart** | [https://www.lucidchart.com/pages/es](https://www.lucidchart.com/pages/es) | [Video](https://www.youtube.com/watch?v=5csQ9Nrn53I) |
-
-## Cronograma
-
-| Semana | Fecha | Tema/Actividades | Tarea |
-| -- | -- | -- | -- |
-| 01 | 14/08 | Presentación. U1 Modelado de Datos | ***Elección equipo de trabajo y caso de estudio. V1: ¿Qué es una BD?*** |
-| 02 | 21/08 | U2 Modelo Conceptual: Entidades y Atributos. **A1** | |
-| 03 | 28/08 | U2 Modelo Conceptual: Relaciones. **A2** | ***V2: Herramientas*** y ***V3: Empresa de Transporte*** |
-| 04 | 04/09 | Consulta de los casos de estudio |  |
-| 05 | 11/09 | E1: Exposiciones del avance de los casos de estudio (DER) | ***TPO1*** |
-| 06 | 18/09 | U2 Modelo Conceptual: MER ext (jerarquias, relaciones recursivas, debil, ternarias, agregaciones e historial). **A3** | ***V4: Médicos sin Frontera (DER)*** |
-| 07 | 25/09 | E2: Exposiciones del avance de los casos de estudio (MER ext) | |
-| 08 | 05/10 | U3 Modelo Lógico Fase I. **A4**  | ***TPO2*** |
-| 09 | 09/10 | U4 MR. **A4** | ***V5: Médicos sin Frontera (ML FI: Reestructuración)*** |
-| 10 | 19/10 | U5 Modelo Lógico Fase II (Transf al Esquema Relacional). **A5** | |
-| 11 | 26/10 | E3: Exposiciones del avance de los casos de estudio (ML y MR) | |
-| 12 | 02/11 | MR y Físico en MySQL WorkBench **A5** |  ***Lectura U6 Normalización y resolución del cuestionario*** |
-| 13 | 09/11 | U7 SQL | ***TPO3*** |
-| 14 | 16/11 | U7 SQL y Consultas para TFI | ***TFI*** |
-| 15 | 23/11 | U7 SQL y Consultas para TFI | ***TFI Recuperatorio*** |
-| 16 | 30/11 | U7 SQL | Cierre de Notas |
 
 ## Criterios de evaluación
 
