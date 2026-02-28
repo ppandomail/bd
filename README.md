@@ -1,8 +1,8 @@
-# Base de Datos (UNSADA)
+# Base de Datos
 
 ## Docente
 
-* Mg. Ing. Pablo Pandolfo
+* **Titular**: Mg. Ing. Pablo Pandolfo
 
 ## Objetivo General
 
@@ -29,7 +29,7 @@
 
 ## Bibliografía
 
-||
+| |
 | -- |
 | [Introducción a las Bases de Datos. Fundamentos y Diseño (Bertone, R.; Thomas, P.)](biblio/introducción-a-las-bases-de-datos-bertone.pdf) |
 | [Diseño conceptual de bases de datos. Un enfoque de entidades-interrelaciones (Batini, B.; Ceri, S.; Navate, S.)](biblio/diseño-conceptual-de-bases-de-datos-battini.pdf) |
